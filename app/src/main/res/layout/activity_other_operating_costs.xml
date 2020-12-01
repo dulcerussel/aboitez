@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    android:paddingTop="20dp">
+    <TableRow android:background="#D3D3D3" android:padding="5dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textStyle="bold"
+            android:textSize="30sp"
+            android:text="Other Operating Costs" />
+
+    </TableRow>
+    <TextView
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"></TextView>
+    <TextView
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"></TextView>
+    <TableRow android:background="#FFFFFF" android:padding="5dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#000000"
+            android:layout_weight="1"
+            android:text="Loses(4%):" />
+        <TextView
+            android:id="@+id/Loses"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="15sp"></TextView>
+
+    </TableRow>
+    <TextView
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"></TextView>
+    <TableRow android:background="#FFFFFF" android:padding="5dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#000000"
+            android:layout_weight="1"
+            android:text="Fuel/Transportation:" />
+        <TextView
+            android:id="@+id/FuelTrans"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="15sp"/>
+
+    </TableRow>
+    <TextView
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"></TextView>
+    <TableRow android:background="#FFFFFF" android:padding="5dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#000000"
+            android:layout_weight="1"
+            android:text="Salaries/Wages:" />
+        <TextView
+            android:id="@+id/SalWage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="15sp"></TextView>
+        />
+    </TableRow>
+    <TextView
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"></TextView>
+    <TableRow android:background="#FFFFFF" android:padding="5dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#000000"
+            android:layout_weight="1"
+            android:text="Others:" />
+        <TextView
+            android:id="@+id/Others"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="15sp"></TextView>
+        />
+    </TableRow>
+    <TextView
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"></TextView>
+    <TableRow android:background="#FFFFFF" android:padding="5dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#000000"
+            android:text="1" />
+        <TextView
+            android:id="@+id/Label1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="15sp"></TextView>
+        <TextView
+            android:id="@+id/cost1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="15sp"></TextView>
+        />
+    </TableRow>
+    <TextView
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"></TextView>
+    <TableRow android:background="#FFFFFF" android:padding="5dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#000000"
+            android:text="2" />
+        <TextView
+            android:id="@+id/Label2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="15sp"></TextView>
+        <TextView
+            android:id="@+id/cost2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="15sp"></TextView>
+        />
+    </TableRow>
+    <TextView
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"></TextView>
+    <TableRow android:background="#FFFFFF" android:padding="5dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#000000"
+            android:text="3" />
+        <TextView
+            android:id="@+id/Label3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="15sp"></TextView>
+        <TextView
+            android:id="@+id/cost3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="15sp"></TextView>
+        />
+        />
+    </TableRow>
+    <TableRow android:background="#FFFFFF" android:padding="5dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="" />
+
+        <Button
+            android:id="@+id/buttonOtherCosts"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="130dp"
+            android:layout_weight="0"
+            android:text="Add" />
+        />
+    </TableRow>
+    <LinearLayout android:background="#FFFFFF" android:paddingLeft="90dp" android:paddingRight="90dp"
+        android:paddingTop="60dp"
+        android:orientation="horizontal">
+
+
+        <Button
+            android:id="@+id/btnCompute"
+            android:layout_width="match_parent"
+            android:layout_height="59dp"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+
+            android:text="COMPUTE" />
+
+
+
+    </LinearLayout>
+</TableLayout>

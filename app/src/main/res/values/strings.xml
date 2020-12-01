@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">aboitez</string>
+    <string-array name="freq_list">
+        <item>--Select Freq.--</item>
+        <item>Daily</item>
+        <item>Weekly</item>
+        <item>Monthly</item>
+    </string-array>
+</resources>

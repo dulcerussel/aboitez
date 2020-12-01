@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/border"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:paddingTop="20dp"
+            android:orientation="vertical">
+
+            <TextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Household"
+                android:textSize="30sp"
+                android:layout_gravity="center"
+                android:textStyle="bold"
+                android:textColor="#000000"
+                android:layout_marginTop="10dp" />
+
+            <TextView
+
+                android:layout_width="217dp"
+                android:layout_height="57dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/border"
+                android:paddingLeft="20dp"
+                android:text="Net Household Income: (Monthly)"
+                android:textColor="#000000"
+                android:textSize="20sp" />
+
+            <TextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Business"
+                android:textSize="30sp"
+                android:layout_gravity="center"
+                android:textStyle="bold"
+                android:textColor="#000000"
+                android:layout_marginTop="10dp" />
+
+            <TextView
+
+                android:layout_width="209dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/border"
+                android:paddingLeft="20dp"
+                android:text="Net Household Income: (Monthly)"
+                android:textColor="#000000"
+                android:textSize="20sp" />
+
+            <TextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="30dp"
+                android:textSize="20sp"
+                android:textColor="#000000"
+                android:text="Total Net Combine Income:"
+                android:layout_marginTop="20dp" />
+
+            <TextView
+
+                android:layout_width="259dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:paddingLeft="30dp"
+                android:text="Adjusted Debt Capacity:
+                (ADC 35%)"
+                android:textColor="#000000"
+                android:textSize="20sp" />
+            <TextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="30dp"
+                android:textColor="#000000"
+                android:textSize="20sp"
+                android:text="Loan Term: 3,6,9 and 12:"
+                android:layout_marginTop="20dp" />
+            <TextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="30dp"
+                android:textColor="#000000"
+                android:textSize="20sp"
+                android:text="ADC x Terms:"
+                android:layout_marginTop="20dp" />
+
+            <TextView
+
+                android:layout_width="201dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:paddingLeft="30dp"
+                android:textSize="20sp"
+                android:text="Max. Loan Amount Availment:"
+                android:textColor="#000000"
+                android:textStyle="bold|italic" />
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:orientation="horizontal"
+                android:layout_marginTop="40dp"
+                android:paddingRight="20dp"
+                android:paddingLeft="75dp">
+
+                <Button
+                    android:id="@+id/btnGen"
+                    android:layout_width="107dp"
+                    android:layout_height="58dp"
+                    android:layout_margin="10dp"
+
+                    android:text="Generate"></Button>
+
+                <Button
+                    android:id="@+id/btnHome"
+                    android:layout_width="104dp"
+                    android:layout_height="58dp"
+                    android:layout_margin="10dp"
+
+                    android:text="Done"></Button>
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</LinearLayout>

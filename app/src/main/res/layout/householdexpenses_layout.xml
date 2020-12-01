@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical">
+            <EditText
+                android:id="@+id/edit_HU"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Household Utilities" />
+            <EditText
+                android:id="@+id/edit_HR"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Household Rent" />
+
+            <EditText
+                android:id="@+id/edit_fg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Food/Groceries" />
+
+            <EditText
+                android:id="@+id/edit_med"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Medicine" />
+            <EditText
+                android:id="@+id/edit_EA"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Education and Allowance" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:textSize="17sp"
+                android:text="Others:">
+
+            </TextView>
+            <EditText
+                android:id="@+id/edit_label1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="label" />
+            <EditText
+                android:id="@+id/edit_cost2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="cost" />
+
+        </LinearLayout>
+    </ScrollView>
+
+
+
+
+</LinearLayout>

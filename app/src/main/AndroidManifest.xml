@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.aboitez">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".ViewRes3"
+            android:label="Business and Household Result"></activity>
+        <activity android:name=".ViewRes2"
+            android:label="Household Inflow and Outflow"/>
+        <activity android:name=".ViewRes1"
+            android:label="Business Inflow and Outflow"/>
+        <activity android:name=".ApplicantList"
+            android:label="Applicant List"/>
+        <activity android:name=".Profile"
+            android:label="Profile"/>
+        <activity android:name=".totalCompute"
+            android:label="Business and Household Result"/>
+        <activity android:name=".result2"
+            android:label="Household Inflow and Outflow"/>
+        <activity android:name=".HouseholdExpenses"
+            android:label="Household Inflow and Outflow"/>
+        <activity android:name=".householdincome"
+            android:label="Household Inflow and Outflow"/>
+        <activity android:name=".Result1"
+            android:label="Business Inflow and Outflow"/>
+        <activity android:name=".OtherOperatingCosts"
+            android:label="Business Inflow and Outflow"/>
+        <activity
+            android:name=".OperatingCost"
+            android:label="Business Inflow and Outflow" />
+        <activity
+            android:name=".GrossDailySales"
+            android:label="Business Inflow and Outflow" />
+        <activity
+            android:name=".AddApplicant"
+            android:label="Loan Applicant" />
+        <activity
+            android:name=".index"
+            android:label="Home" />
+        <activity
+            android:name=".MainActivity"
+            android:label="Login">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

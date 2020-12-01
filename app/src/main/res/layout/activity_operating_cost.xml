@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingTop="10dp"
+    tools:context=".OperatingCost">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#D3D3D3"
+        android:textStyle="bold"
+        android:text="Operating Costs"
+        android:textSize="30sp"></TextView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingLeft="15dp"
+        android:paddingTop="20dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="34dp"
+            android:layout_weight="1"
+            android:textColor="#000000"
+            android:text="Item"></TextView>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="34dp"
+            android:layout_weight="1"
+            android:textColor="#000000"
+            android:text="Cost"></TextView>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="34dp"
+            android:layout_weight="1"
+            android:textColor="#000000"
+            android:text="Sales"></TextView>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="34dp"
+            android:layout_weight="1"
+            android:textColor="#000000"
+            android:text="Weekly Purchase"></TextView>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="366dp"
+        android:orientation="vertical"
+        >
+
+        <ListView
+            android:layout_width="wrap_content"
+            android:layout_height="318dp"
+            android:layout_weight="0" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:orientation="horizontal"
+        android:paddingLeft="270dp">
+
+        <Button
+            android:id="@+id/imgbutton"
+            android:layout_width="99dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0"
+            android:text="Add" />
+        />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="132dp"
+        android:orientation="horizontal"
+        android:paddingLeft="110dp"
+        android:paddingTop="60dp"
+        android:paddingRight="110dp">
+
+        <Button
+            android:id="@+id/btnNext"
+            android:layout_width="183dp"
+            android:layout_height="58dp"
+            android:layout_weight="1"
+            android:text="NEXT"
+            android:textColor="#000000" />
+        />
+    </LinearLayout>
+
+
+</LinearLayout>
