@@ -7,23 +7,34 @@ import android.database.sqlite.SQLiteOpenHelper;
 import androidx.annotation.Nullable;
 
 public class DBHelper extends SQLiteOpenHelper {
-    public static final int DATABASE_VERSION = 1;
-    public static final String DATABASE_NAME = "AboitizLoan.db";
+
+    public static final String DATABASE_NAME = "AboitizLoan";
+    public static final String TBL_APPLICANT = "applicant";
+    public static final String TBL_APPLICATION = "application";
+    public static final String TBL_HOUSEHOLD = "household";
+    public static final String TBL_HOUSEHOLDINCOME = "apphouseholdincomelicant";
+    public static final String TBL_HOUSEHOLDEXPENSE = "householdexpense";
+    public static final String TBL_BUSINESS= "business";
+    public static final String TBL_OPERATINGCOST= "operatingcost";
+    public static final String TBL_OTHERCOST = "othercost";
+    Context context;
+
+
 
     public DBHelper(@Nullable Context context, @Nullable String name, @Nullable SQLiteDatabase.CursorFactory factory, int version) {
-        super(context, DATABASE_NAME, factory, DATABASE_VERSION);
+        super(context, DATABASE_NAME, null, 1);
     }
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-        String table1 = "CREATE TABLE applicant (id INTEGER PRIMARY KEY,name TEXT)";
-        String table2 = "CREATE TABLE application (id INTEGER PRIMARY KEY,name TEXT)";
-        String table3 = "CREATE TABLE household (id INTEGER PRIMARY KEY,name TEXT)";
-        String table4 = "CREATE TABLE householdincome (id INTEGER PRIMARY KEY,name TEXT)";
-        String table5 = "CREATE TABLE householdexpense (id INTEGER PRIMARY KEY,name TEXT)";
-        String table6 = "CREATE TABLE business (id INTEGER PRIMARY KEY,name TEXT)";
-        String table7 = "CREATE TABLE operatingcost (id INTEGER PRIMARY KEY,name TEXT)";
-        String table8 = "CREATE TABLE othercost (id INTEGER PRIMARY KEY,name TEXT)";
+        String table1 = "CREATE TABLE "+TBL_APPLICANT+" (id INTEGER PRIMARY KEY,name TEXT)";
+        String table2 = "CREATE TABLE "+TBL_APPLICATION+" (id INTEGER PRIMARY KEY,name TEXT)";
+        String table3 = "CREATE TABLE "+TBL_HOUSEHOLD+" (id INTEGER PRIMARY KEY,name TEXT)";
+        String table4 = "CREATE TABLE "+TBL_HOUSEHOLDINCOME+"(id INTEGER PRIMARY KEY,name TEXT)";
+        String table5 = "CREATE TABLE "+TBL_HOUSEHOLDEXPENSE+" (id INTEGER PRIMARY KEY,name TEXT)";
+        String table6 = "CREATE TABLE "+TBL_BUSINESS+" (id INTEGER PRIMARY KEY,name TEXT)";
+        String table7 = "CREATE TABLE "+TBL_OPERATINGCOST+" (id INTEGER PRIMARY KEY,name TEXT)";
+        String table8 = "CREATE TABLE "+TBL_OTHERCOST+" (id INTEGER PRIMARY KEY,name TEXT)";
 
         db.execSQL(table1);
         db.execSQL(table2);
