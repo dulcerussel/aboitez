@@ -7,10 +7,10 @@ public class MyHousehold {
     private float grosshouseexpense;
     private float nethouseincome;
     private float grosspersonalincome;
-    private float familylocsize;
+    private String familylocsize;
     private float expectedhouseexpense;
 
-    public MyHousehold(int id, int application_id, float grosshouseincome, float grosshouseexpense, float nethouseincome, float grosspersonalincome, float familylocsize, float expectedhouseexpense) {
+    public MyHousehold(int id, int application_id, float grosshouseincome, float grosshouseexpense, float nethouseincome, float grosspersonalincome, String familylocsize, float expectedhouseexpense) {
         this.id = id;
         this.application_id = application_id;
         this.grosshouseincome = grosshouseincome;
@@ -86,11 +86,11 @@ public class MyHousehold {
         this.grosspersonalincome = grosspersonalincome;
     }
 
-    public float getFamilylocsize() {
+    public String getFamilylocsize() {
         return familylocsize;
     }
 
-    public void setFamilylocsize(float familylocsize) {
+    public void setFamilylocsize(String familylocsize) {
         this.familylocsize = familylocsize;
     }
 

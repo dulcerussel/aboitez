@@ -1,14 +1,17 @@
 package com.example.aboitez;
 
 public class MyHouseholdIncome {
-
+    private int id;
+    private int household_id;
     private  String sourceincome;
     private String details;
     private String type;
     private String freq;
     private float amount;
 
-    public MyHouseholdIncome(String sourceincome, String details, String type, String freq, float amount) {
+    public MyHouseholdIncome(int id, int household_id, String sourceincome, String details, String type, String freq, float amount) {
+        this.id = id;
+        this.household_id = household_id;
         this.sourceincome = sourceincome;
         this.details = details;
         this.type = type;
@@ -22,12 +25,30 @@ public class MyHouseholdIncome {
     @Override
     public String toString() {
         return "MyHouseholdIncome{" +
-                "sourceincome='" + sourceincome + '\'' +
+                "id=" + id +
+                ", household_id=" + household_id +
+                ", sourceincome='" + sourceincome + '\'' +
                 ", details='" + details + '\'' +
                 ", type='" + type + '\'' +
                 ", freq='" + freq + '\'' +
                 ", amount=" + amount +
                 '}';
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public int getHousehold_id() {
+        return household_id;
+    }
+
+    public void setHousehold_id(int household_id) {
+        this.household_id = household_id;
     }
 
     public String getSourceincome() {
@@ -70,3 +91,4 @@ public class MyHouseholdIncome {
         this.amount = amount;
     }
 }
+

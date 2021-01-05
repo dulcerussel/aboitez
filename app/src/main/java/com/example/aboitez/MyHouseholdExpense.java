@@ -1,7 +1,8 @@
 package com.example.aboitez;
 
 public class MyHouseholdExpense {
-
+    private int id;
+    private int household_id;
     private float houseutilies;
     private float  houserent;
     private float housefood;
@@ -9,7 +10,9 @@ public class MyHouseholdExpense {
     private float houseeduc;
     private float otherexpense;
 
-    public MyHouseholdExpense(float houseutilies, float houserent, float housefood, float housemedicine, float houseeduc, float otherexpense) {
+    public MyHouseholdExpense(int id, int household_id, float houseutilies, float houserent, float housefood, float housemedicine, float houseeduc, float otherexpense) {
+        this.id = id;
+        this.household_id = household_id;
         this.houseutilies = houseutilies;
         this.houserent = houserent;
         this.housefood = housefood;
@@ -24,13 +27,31 @@ public class MyHouseholdExpense {
     @Override
     public String toString() {
         return "MyHouseholdExpense{" +
-                "houseutilies=" + houseutilies +
+                "id=" + id +
+                ", household_id=" + household_id +
+                ", houseutilies=" + houseutilies +
                 ", houserent=" + houserent +
                 ", housefood=" + housefood +
                 ", housemedicine=" + housemedicine +
                 ", houseeduc=" + houseeduc +
                 ", otherexpense=" + otherexpense +
                 '}';
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public int getHousehold_id() {
+        return household_id;
+    }
+
+    public void setHousehold_id(int household_id) {
+        this.household_id = household_id;
     }
 
     public float getHouseutilies() {
