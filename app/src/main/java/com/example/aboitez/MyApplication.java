@@ -5,15 +5,15 @@ public class MyApplication {
     private int id;
     private int applicant_id;
 
-    private String business_total;
-    private String household_total;
-    private String totalnetcombineincome;
-    private String adc;
+    private float business_total;
+    private float household_total;
+    private float totalnetcombineincome;
+    private float adc;
     private String loanterm;
-    private String adcxterms;
-    private String maxloanamount;
+    private float adcxterms;
+    private float maxloanamount;
 
-    public MyApplication(int id, int applicant_id, String business_total, String household_total, String totalnetcombineincome, String adc, String loanterm, String adcxterms, String maxloanamount) {
+    public MyApplication(int id, int applicant_id, float business_total, float household_total, float totalnetcombineincome, float adc, String loanterm, float adcxterms, float maxloanamount) {
         this.id = id;
         this.applicant_id = applicant_id;
         this.business_total = business_total;
@@ -33,13 +33,13 @@ public class MyApplication {
         return "MyApplication{" +
                 "id=" + id +
                 ", applicant_id=" + applicant_id +
-                ", business_total='" + business_total + '\'' +
-                ", household_total='" + household_total + '\'' +
-                ", totalnetcombineincome='" + totalnetcombineincome + '\'' +
-                ", adc='" + adc + '\'' +
+                ", business_total=" + business_total +
+                ", household_total=" + household_total +
+                ", totalnetcombineincome=" + totalnetcombineincome +
+                ", adc=" + adc +
                 ", loanterm='" + loanterm + '\'' +
-                ", adcxterms='" + adcxterms + '\'' +
-                ", maxloanamount='" + maxloanamount + '\'' +
+                ", adcxterms=" + adcxterms +
+                ", maxloanamount=" + maxloanamount +
                 '}';
     }
 
@@ -59,35 +59,35 @@ public class MyApplication {
         this.applicant_id = applicant_id;
     }
 
-    public String getBusiness_total() {
+    public float getBusiness_total() {
         return business_total;
     }
 
-    public void setBusiness_total(String business_total) {
+    public void setBusiness_total(float business_total) {
         this.business_total = business_total;
     }
 
-    public String getHousehold_total() {
+    public float getHousehold_total() {
         return household_total;
     }
 
-    public void setHousehold_total(String household_total) {
+    public void setHousehold_total(float household_total) {
         this.household_total = household_total;
     }
 
-    public String getTotalnetcombineincome() {
+    public float getTotalnetcombineincome() {
         return totalnetcombineincome;
     }
 
-    public void setTotalnetcombineincome(String totalnetcombineincome) {
+    public void setTotalnetcombineincome(float totalnetcombineincome) {
         this.totalnetcombineincome = totalnetcombineincome;
     }
 
-    public String getAdc() {
+    public float getAdc() {
         return adc;
     }
 
-    public void setAdc(String adc) {
+    public void setAdc(float adc) {
         this.adc = adc;
     }
 
@@ -99,19 +99,19 @@ public class MyApplication {
         this.loanterm = loanterm;
     }
 
-    public String getAdcxterms() {
+    public float getAdcxterms() {
         return adcxterms;
     }
 
-    public void setAdcxterms(String adcxterms) {
+    public void setAdcxterms(float adcxterms) {
         this.adcxterms = adcxterms;
     }
 
-    public String getMaxloanamount() {
+    public float getMaxloanamount() {
         return maxloanamount;
     }
 
-    public void setMaxloanamount(String maxloanamount) {
+    public void setMaxloanamount(float maxloanamount) {
         this.maxloanamount = maxloanamount;
     }
 }

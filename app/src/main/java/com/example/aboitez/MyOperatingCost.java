@@ -6,13 +6,12 @@ public class MyOperatingCost {
     private int business_id;
 
     private String item;
-    private String cost;
-    private String sales;
-    private String markup;
-    private String weeklypurchase;
+    private float cost;
+    private float sales;
+    private int markup;
+    private float weeklypurchase;
 
-
-    public MyOperatingCost(int id, int business_id, String item, String cost, String sales, String markup, String weeklypurchase) {
+    public MyOperatingCost(int id, int business_id, String item, float cost, float sales, int markup, float weeklypurchase) {
         this.id = id;
         this.business_id = business_id;
         this.item = item;
@@ -25,17 +24,16 @@ public class MyOperatingCost {
     public MyOperatingCost() {
     }
 
-
     @Override
     public String toString() {
         return "MyOperatingCost{" +
                 "id=" + id +
                 ", business_id=" + business_id +
                 ", item='" + item + '\'' +
-                ", cost='" + cost + '\'' +
-                ", sales='" + sales + '\'' +
-                ", markup='" + markup + '\'' +
-                ", weeklypurchase='" + weeklypurchase + '\'' +
+                ", cost=" + cost +
+                ", sales=" + sales +
+                ", markup=" + markup +
+                ", weeklypurchase=" + weeklypurchase +
                 '}';
     }
 
@@ -63,35 +61,35 @@ public class MyOperatingCost {
         this.item = item;
     }
 
-    public String getCost() {
+    public float getCost() {
         return cost;
     }
 
-    public void setCost(String cost) {
+    public void setCost(float cost) {
         this.cost = cost;
     }
 
-    public String getSales() {
+    public float getSales() {
         return sales;
     }
 
-    public void setSales(String sales) {
+    public void setSales(float sales) {
         this.sales = sales;
     }
 
-    public String getMarkup() {
+    public int getMarkup() {
         return markup;
     }
 
-    public void setMarkup(String markup) {
+    public void setMarkup(int markup) {
         this.markup = markup;
     }
 
-    public String getWeeklypurchase() {
+    public float getWeeklypurchase() {
         return weeklypurchase;
     }
 
-    public void setWeeklypurchase(String weeklypurchase) {
+    public void setWeeklypurchase(float weeklypurchase) {
         this.weeklypurchase = weeklypurchase;
     }
 }

@@ -4,20 +4,20 @@ public class MyBusiness {
 
     private int id;
     private int application_id;
-    private String monday;
-    private String tuesday;
-    private String wednesday;
-    private String thursday;
-    private String friday;
-    private String saturday;
-    private String sunday;
-    private String weeklysales;
-    private String dailyavesales;
-    private String dailystandavesales;
-    private String actualmarkup;
+    private float monday;
+    private float tuesday;
+    private float wednesday;
+    private float thursday;
+    private float friday;
+    private float saturday;
+    private float sunday;
+    private float weeklysales;
+    private float dailyavesales;
+    private float dailystandavesales;
+    private int actualmarkup;
 
 
-    public MyBusiness(int id, int application_id, String monday, String tuesday, String wednesday, String thursday, String friday, String saturday, String sunday, String weeklysales, String dailyavesales, String dailystandavesales, String actualmarkup) {
+    public MyBusiness(int id, int application_id, float monday, float tuesday, float wednesday, float thursday, float friday, float saturday, float sunday, float weeklysales, float dailyavesales, float dailystandavesales, int actualmarkup) {
         this.id = id;
         this.application_id = application_id;
         this.monday = monday;
@@ -36,23 +36,22 @@ public class MyBusiness {
     public MyBusiness() {
     }
 
-
     @Override
     public String toString() {
         return "MyBusiness{" +
                 "id=" + id +
                 ", application_id=" + application_id +
-                ", monday='" + monday + '\'' +
-                ", tuesday='" + tuesday + '\'' +
-                ", wednesday='" + wednesday + '\'' +
-                ", thursday='" + thursday + '\'' +
-                ", friday='" + friday + '\'' +
-                ", saturday='" + saturday + '\'' +
-                ", sunday='" + sunday + '\'' +
-                ", weeklysales='" + weeklysales + '\'' +
-                ", dailyavesales='" + dailyavesales + '\'' +
-                ", dailystandavesales='" + dailystandavesales + '\'' +
-                ", actualmarkup='" + actualmarkup + '\'' +
+                ", monday=" + monday +
+                ", tuesday=" + tuesday +
+                ", wednesday=" + wednesday +
+                ", thursday=" + thursday +
+                ", friday=" + friday +
+                ", saturday=" + saturday +
+                ", sunday=" + sunday +
+                ", weeklysales=" + weeklysales +
+                ", dailyavesales=" + dailyavesales +
+                ", dailystandavesales=" + dailystandavesales +
+                ", actualmarkup=" + actualmarkup +
                 '}';
     }
 
@@ -72,91 +71,91 @@ public class MyBusiness {
         this.application_id = application_id;
     }
 
-    public String getMonday() {
+    public float getMonday() {
         return monday;
     }
 
-    public void setMonday(String monday) {
+    public void setMonday(float monday) {
         this.monday = monday;
     }
 
-    public String getTuesday() {
+    public float getTuesday() {
         return tuesday;
     }
 
-    public void setTuesday(String tuesday) {
+    public void setTuesday(float tuesday) {
         this.tuesday = tuesday;
     }
 
-    public String getWednesday() {
+    public float getWednesday() {
         return wednesday;
     }
 
-    public void setWednesday(String wednesday) {
+    public void setWednesday(float wednesday) {
         this.wednesday = wednesday;
     }
 
-    public String getThursday() {
+    public float getThursday() {
         return thursday;
     }
 
-    public void setThursday(String thursday) {
+    public void setThursday(float thursday) {
         this.thursday = thursday;
     }
 
-    public String getFriday() {
+    public float getFriday() {
         return friday;
     }
 
-    public void setFriday(String friday) {
+    public void setFriday(float friday) {
         this.friday = friday;
     }
 
-    public String getSaturday() {
+    public float getSaturday() {
         return saturday;
     }
 
-    public void setSaturday(String saturday) {
+    public void setSaturday(float saturday) {
         this.saturday = saturday;
     }
 
-    public String getSunday() {
+    public float getSunday() {
         return sunday;
     }
 
-    public void setSunday(String sunday) {
+    public void setSunday(float sunday) {
         this.sunday = sunday;
     }
 
-    public String getWeeklysales() {
+    public float getWeeklysales() {
         return weeklysales;
     }
 
-    public void setWeeklysales(String weeklysales) {
+    public void setWeeklysales(float weeklysales) {
         this.weeklysales = weeklysales;
     }
 
-    public String getDailyavesales() {
+    public float getDailyavesales() {
         return dailyavesales;
     }
 
-    public void setDailyavesales(String dailyavesales) {
+    public void setDailyavesales(float dailyavesales) {
         this.dailyavesales = dailyavesales;
     }
 
-    public String getDailystandavesales() {
+    public float getDailystandavesales() {
         return dailystandavesales;
     }
 
-    public void setDailystandavesales(String dailystandavesales) {
+    public void setDailystandavesales(float dailystandavesales) {
         this.dailystandavesales = dailystandavesales;
     }
 
-    public String getActualmarkup() {
+    public int getActualmarkup() {
         return actualmarkup;
     }
 
-    public void setActualmarkup(String actualmarkup) {
+    public void setActualmarkup(int actualmarkup) {
         this.actualmarkup = actualmarkup;
     }
 }

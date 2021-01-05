@@ -5,12 +5,12 @@ public class MyOtherOperatingCost {
     private int id;
     private int business_id;
 
-    private String loss;
-    private String transpo;
-    private String salaries;
-    private String others;
+    private float loss;
+    private float transpo;
+    private float salaries;
+    private float others;
 
-    public MyOtherOperatingCost(int id, int business_id, String loss, String transpo, String salaries, String others) {
+    public MyOtherOperatingCost(int id, int business_id, float loss, float transpo, float salaries, float others) {
         this.id = id;
         this.business_id = business_id;
         this.loss = loss;
@@ -27,10 +27,10 @@ public class MyOtherOperatingCost {
         return "MyOtherOperatingCost{" +
                 "id=" + id +
                 ", business_id=" + business_id +
-                ", loss='" + loss + '\'' +
-                ", transpo='" + transpo + '\'' +
-                ", salaries='" + salaries + '\'' +
-                ", others='" + others + '\'' +
+                ", loss=" + loss +
+                ", transpo=" + transpo +
+                ", salaries=" + salaries +
+                ", others=" + others +
                 '}';
     }
 
@@ -50,35 +50,35 @@ public class MyOtherOperatingCost {
         this.business_id = business_id;
     }
 
-    public String getLoss() {
+    public float getLoss() {
         return loss;
     }
 
-    public void setLoss(String loss) {
+    public void setLoss(float loss) {
         this.loss = loss;
     }
 
-    public String getTranspo() {
+    public float getTranspo() {
         return transpo;
     }
 
-    public void setTranspo(String transpo) {
+    public void setTranspo(float transpo) {
         this.transpo = transpo;
     }
 
-    public String getSalaries() {
+    public float getSalaries() {
         return salaries;
     }
 
-    public void setSalaries(String salaries) {
+    public void setSalaries(float salaries) {
         this.salaries = salaries;
     }
 
-    public String getOthers() {
+    public float getOthers() {
         return others;
     }
 
-    public void setOthers(String others) {
+    public void setOthers(float others) {
         this.others = others;
     }
 }
