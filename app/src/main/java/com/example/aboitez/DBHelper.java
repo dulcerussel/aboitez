@@ -13,7 +13,7 @@ public class DBHelper extends SQLiteOpenHelper {
     public static final String TBL_APPLICANT = "applicant";
     public static final String TBL_APPLICATION = "application";
     public static final String TBL_HOUSEHOLD = "household";
-    public static final String TBL_HOUSEHOLDINCOME = "householdincom";
+    public static final String TBL_HOUSEHOLDINCOME = "householdincome";
     public static final String TBL_HOUSEHOLDEXPENSE = "householdexpense";
     public static final String TBL_BUSINESS= "business";
     public static final String TBL_OPERATINGCOST= "operatingcost";
@@ -214,5 +214,57 @@ public class DBHelper extends SQLiteOpenHelper {
         db.close();
         return result;
     }
+
+
+    public int deleteApplicant(int id){
+        SQLiteDatabase db=this.getWritableDatabase();
+        int result=0;
+        result=db.delete(TBL_APPLICANT,"id=?",new String[]{id+""});
+        return result;
+    }
+
+    public int deleteApplication(int id){
+        SQLiteDatabase db=this.getWritableDatabase();
+        int result=0;
+        result=db.delete(TBL_APPLICATION,"id=?",new String[]{id+""});
+        return result;
+    }
+    public int deleteBusiness(int id){
+        SQLiteDatabase db=this.getWritableDatabase();
+        int result=0;
+        result=db.delete(TBL_BUSINESS,"id=?",new String[]{id+""});
+        return result;
+    }
+    public int deleteOperatingCost(int id){
+        SQLiteDatabase db=this.getWritableDatabase();
+        int result=0;
+        result=db.delete(TBL_OPERATINGCOST,"id=?",new String[]{id+""});
+        return result;
+    }
+    public int deleteOtherOperatingCost(int id){
+        SQLiteDatabase db=this.getWritableDatabase();
+        int result=0;
+        result=db.delete(TBL_OTHERCOST,"id=?",new String[]{id+""});
+        return result;
+    }
+    public int deleteHousehold(int id){
+        SQLiteDatabase db=this.getWritableDatabase();
+        int result=0;
+        result=db.delete(TBL_HOUSEHOLD,"id=?",new String[]{id+""});
+        return result;
+    }
+    public int deleteHouseholdIncome(int id){
+        SQLiteDatabase db=this.getWritableDatabase();
+        int result=0;
+        result=db.delete(TBL_HOUSEHOLDINCOME,"id=?",new String[]{id+""});
+        return result;
+    }
+    public int deleteHouseholdExpense(int id){
+        SQLiteDatabase db=this.getWritableDatabase();
+        int result=0;
+        result=db.delete(TBL_HOUSEHOLDEXPENSE,"id=?",new String[]{id+""});
+        return result;
+    }
+
 
 }
