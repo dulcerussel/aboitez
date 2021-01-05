@@ -10,6 +10,8 @@ import android.widget.EditText;
 
 public class AddApplicant extends AppCompatActivity {
     private Button button;
+    private Button btnSave;
+
     private EditText clientname1;
     private EditText groupname1;
     private EditText branch1;
@@ -24,6 +26,7 @@ public class AddApplicant extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_applicant);
         button = (Button) findViewById(R.id.BtnAddAppli);
+        btnSave = findViewById(R.id.btnSave1);
         this.clientname1 = (EditText) findViewById(R.id.nameofclient);
         this.groupname1 = (EditText) findViewById(R.id.groupname);
         this.branch1 = (EditText) findViewById(R.id.branch);
@@ -38,6 +41,22 @@ public class AddApplicant extends AppCompatActivity {
                 openActivity();
             }
         });
+        btnSave.setOnClickListener(openActivity2();)
+
+
+    }
+
+    private View.OnClickListener openActivity2() {
+        String clientname2 = clientname1.getText().toString();
+        String groupname2 = groupname1.getText().toString();
+        String branch2 = branch1.getText().toString();
+        String area2 = area1.getText().toString();
+        String date2 = date1.getText().toString();
+        String loanapplied2  = loanapplied1.getText().toString();
+        String businessname2 = businessname1.getText().toString();
+        String businesstype2 = businesstype1.getText().toString();
+
+
 
     }
 
