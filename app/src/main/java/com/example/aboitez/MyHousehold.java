@@ -24,7 +24,65 @@ public class MyHousehold  extends Application {
     }
 
     public MyHousehold() {
+
     }
+    public void CalculateNetHouseholdIncome(){
+            float x = getGrosshouseexpense();
+            float y = getGrosshouseincome();
+            setNethouseincome(x+y);
+    }
+    public void CalculateExpectedHouseHoldExpense(){
+        String input = getFamilylocsize();
+        switch(input){
+            case "Urban, 1-2 persons" : float a = (float)12500.00;
+                                        setGrosshouseexpense(a);
+                                        setExpectedhouseexpense(a);break;
+            case "Urban, 3-4 persons" : float b = (float)16667.00;
+                                        setGrosshouseexpense(b);
+                                        setExpectedhouseexpense(b); break;
+            case "Urban, 5-6 persons" : float c = (float)20833.00;
+                setGrosshouseexpense(c);
+                                        setExpectedhouseexpense(c); break;
+            case "Urban, 7-8 persons" : float d = (float)25000.00;
+                setGrosshouseexpense(d);
+                                            setExpectedhouseexpense(d); break;
+            case "Urban, More than 8" : float e = (float)33333.00;
+                setGrosshouseexpense(e);
+                                        setExpectedhouseexpense(e); break;
+            case "Rural, 1-2 persons" : float f = (float)8333.00;
+                setGrosshouseexpense(f);
+                setExpectedhouseexpense(f); break;
+            case "Rural, 3-4 persons" : float g = (float)12500.00;
+                setGrosshouseexpense(g);
+                setExpectedhouseexpense(g); break;
+            case "Rural, 5-6 persons" : float h = (float)16667.00;
+                setGrosshouseexpense(h);
+                setExpectedhouseexpense(h); break;
+            case "Rural, 7-8 persons" : float i = (float)20833.00;
+                setGrosshouseexpense(i);
+                setExpectedhouseexpense(i); break;
+            case "Rural, More than 8" : float j = (float)29167.00;
+                setGrosshouseexpense(j);
+                setExpectedhouseexpense(j); break;
+            case "NCR, 1-2 persons" : float l = (float)20833.00;
+                setGrosshouseexpense(l);
+                setExpectedhouseexpense(l); break;
+            case "NCR, 3-4 persons" : float m = (float)25000.00;
+                setGrosshouseexpense(m);
+                setExpectedhouseexpense(m); break;
+            case "NCR, 5-6 persons" : float n = (float)29167.00;
+                setGrosshouseexpense(n);
+                setExpectedhouseexpense(n); break;
+            case "NCR, 7-8 persons" : float o = (float)33333.00;
+                setGrosshouseexpense(o);
+                setExpectedhouseexpense(o); break;
+            case "NCR, More than 8" : float p = (float)41667.00;
+                setGrosshouseexpense(p);
+                setExpectedhouseexpense(p); break;
+        }
+    }
+
+
 
     @Override
     public String toString() {
