@@ -50,7 +50,7 @@ public class Result1 extends AppCompatActivity {
         otherOperatingCost.CalculateLoss(operatingCost.getWeeklypurchase());
         txtLoses.setText(String.valueOf(otherOperatingCost.getLoss()));
         txtTotalWeeklyPurchase.setText(String.valueOf(operatingCost.getWeeklypurchase()));
-        //txtTotalCost.setText(String.valueOf(operatingCost.get());
+        txtTotalCost.setText(String.valueOf(business.getNetcost()));
 
         button = (Button) findViewById(R.id.btnCon);
         button.setOnClickListener(new View.OnClickListener() {
