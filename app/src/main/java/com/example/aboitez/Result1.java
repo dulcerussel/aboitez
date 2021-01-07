@@ -39,6 +39,12 @@ public class Result1 extends AppCompatActivity {
         this.txtTotalCost = (TextView) findViewById(R.id.textView25);
 
 
+        business.CalculateAverageSales();
+        business.CalculateStandardAverageSales();
+        //business.CalculateTotalCost();
+        business.CalculateWeeklyNetProfit();
+        business.CalculateWeeklySales();
+        //business.CalculateWeeklyStandardSales();
 
         txtWeeklySales.setText(String.valueOf(business.getWeeklysales()));
         txtDailyAveSales.setText(String.valueOf(business.getDailyavesales()));
