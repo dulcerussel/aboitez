@@ -53,7 +53,6 @@ public class AddApplicant extends AppCompatActivity {
 
     private void openActivity() {
         Intent intent = new Intent(this, GrossDailySales.class);
-
        applicant.setClientname(clientname1.getText().toString());
         applicant.setGroupname(groupname1.getText().toString());
         applicant.setBranchname(branch1.getText().toString());

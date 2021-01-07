@@ -1,6 +1,8 @@
 package com.example.aboitez;
 
-public class MyOtherOperatingCost {
+import android.app.Application;
+
+public class MyOtherOperatingCost extends Application {
 
     private int id;
     private int business_id;

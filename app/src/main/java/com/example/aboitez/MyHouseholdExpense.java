@@ -1,6 +1,8 @@
 package com.example.aboitez;
 
-public class MyHouseholdExpense {
+import android.app.Application;
+
+public class MyHouseholdExpense  extends Application {
     private int id;
     private int household_id;
     private float houseutilies;

@@ -1,6 +1,8 @@
 package com.example.aboitez;
 
-public class MyApplication {
+import android.app.Application;
+
+public class MyApplication extends Application {
 
     private int id;
     private int applicant_id;

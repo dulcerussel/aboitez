@@ -9,6 +9,13 @@ import android.widget.Button;
 
 public class OtherOperatingCosts extends AppCompatActivity {
     private Button button, button2;
+
+    public MyOtherOperatingCost varoperatingcost;
+
+    {
+        varoperatingcost = new MyOtherOperatingCost();
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
