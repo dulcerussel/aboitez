@@ -24,6 +24,7 @@ public class result2 extends AppCompatActivity {
         MyHouseholdExpense householdExpense = (MyHouseholdExpense) getApplicationContext();
         MyHouseholdIncome householdIncome = (MyHouseholdIncome) getApplicationContext();
 
+        // CHANGEEE THE TEXTVIEW ID
         this.txtHouseholdincome = (TextView) findViewById(R.id.textView34);
         this.txtHouseholdexpense = (TextView) findViewById(R.id.textView33);
         this.txtNethouseholdincome = (TextView) findViewById(R.id.textView32);
