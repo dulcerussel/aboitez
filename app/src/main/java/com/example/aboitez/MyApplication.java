@@ -27,6 +27,8 @@ public class MyApplication extends Application {
         this.maxloanamount = maxloanamount;
     }
 
+
+
     public MyApplication() {
     }
 
@@ -44,6 +46,56 @@ public class MyApplication extends Application {
                 ", maxloanamount=" + maxloanamount +
                 '}';
     }
+
+
+    public void CalculateNetBusinessIncome(float netincome){
+        setBusiness_total(netincome*4);
+    }
+
+    //set only on NetHouseholdIncome ; No need calculations
+
+    public void CalculateNetCombineIncome(float input, float input2){
+        setTotalnetcombineincome(input+input2);
+    }
+    public void CalculateAdjustedDebtCapacity(float input){
+        float y = (float)0.35;
+        setAdc(input*y);
+    }
+
+    public void CalculateADCxTerms(){
+        String c = getLoanterm();
+        float adc = getAdc();
+        switch(c){
+            case "3 months" :setAdcxterms(adc*16);
+                break;
+            case "6 months" :
+            setAdcxterms(adc*24);
+                 break;
+            case "9 months" : setAdcxterms(adc*36);
+                break;
+            case "12 months" : setAdcxterms(adc*48);
+                break;
+        }
+    }
+
+    public void MaxLoanAmountAvailment(){
+        String c = getLoanterm();
+        float adcxterms = getAdcxterms();
+        float x;
+        switch(c){
+            case "3 months" : x = (float)0.8; setMaxloanamount(adcxterms*x);
+                break;
+            case "6 months" :
+                x = (float)1.2; setMaxloanamount(adcxterms*x);
+                break;
+            case "9 months" : x = (float)0.1; setMaxloanamount(adcxterms*x);
+                break;
+            case "12 months" : x = (float)0.11; setMaxloanamount(adcxterms*x);
+                break;
+        }
+    }
+
+
 
     public int getId() {
         return id;
