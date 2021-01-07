@@ -12,6 +12,12 @@ public class AddApplicant extends AppCompatActivity {
     private Button button;
     private Button btnSave;
 
+    public MyApplicant applicant;
+
+    {
+        applicant = new MyApplicant();
+    }
+
     private EditText clientname1;
     private EditText groupname1;
     private EditText branch1;
@@ -41,44 +47,23 @@ public class AddApplicant extends AppCompatActivity {
                 openActivity();
             }
         });
-        btnSave.setOnClickListener(openActivity2();)
-
-
-    }
-
-    private View.OnClickListener openActivity2() {
-        String clientname2 = clientname1.getText().toString();
-        String groupname2 = groupname1.getText().toString();
-        String branch2 = branch1.getText().toString();
-        String area2 = area1.getText().toString();
-        String date2 = date1.getText().toString();
-        String loanapplied2  = loanapplied1.getText().toString();
-        String businessname2 = businessname1.getText().toString();
-        String businesstype2 = businesstype1.getText().toString();
-
 
 
     }
 
     private void openActivity() {
         Intent intent = new Intent(this, GrossDailySales.class);
-        String clientname2 = clientname1.getText().toString();
-        String groupname2 = groupname1.getText().toString();
-        String branch2 = branch1.getText().toString();
-        String area2 = area1.getText().toString();
-        String date2 = date1.getText().toString();
-        String loanapplied2  = loanapplied1.getText().toString();
-        String businessname2 = businessname1.getText().toString();
-        String businesstype2 = businesstype1.getText().toString();
 
-        intent.putExtra("clientname",clientname2);
-        intent.putExtra("groupname",groupname2);
-        intent.putExtra("branch",branch2);
-        intent.putExtra("area",area2);
-        intent.putExtra("date",date2);
-        intent.putExtra("loanapplied",loanapplied2);
-        intent.putExtra("businessname",businessname2);
-        intent.putExtra("businesstype",businesstype2);
+       applicant.setClientname(clientname1.getText().toString());
+        applicant.setGroupname(groupname1.getText().toString());
+        applicant.setBranchname(branch1.getText().toString());
+        applicant.setArea(area1.getText().toString());
+        applicant.setDateconducted(date1.getText().toString());
+        applicant.setLoanapplied(loanapplied1.getText().toString());
+        applicant.setBusinessname(businessname1.getText().toString());
+        applicant.setBusinesstype(businesstype1.getText().toString());
+
+
         startActivity(intent);
     }
 }
