@@ -13,14 +13,12 @@ public class GrossDailySales extends AppCompatActivity implements ExampleDialog.
     private TextView monday1, tuesday1, wednesday1, thursday1, friday1, saturday1, sunday1;
     private Button button, button2;
 
-    public MyBusiness business;
 
-    {
-        business = new MyBusiness();
-    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_gross_daily_sales);
         monday1 = (TextView) findViewById(R.id.Monday);
@@ -52,6 +50,8 @@ public class GrossDailySales extends AppCompatActivity implements ExampleDialog.
 
     private void OpenOperatingCost() {
         Intent intent = new Intent(this, OperatingCost.class);
+
+        MyBusiness business = (MyBusiness) getApplicationContext();
 
         business.setMonday(Float.valueOf(monday1.getText().toString()));
         business.setTuesday(Float.valueOf(tuesday1.getText().toString()));

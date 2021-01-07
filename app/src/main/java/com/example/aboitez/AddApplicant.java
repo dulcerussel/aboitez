@@ -12,11 +12,6 @@ public class AddApplicant extends AppCompatActivity {
     private Button button;
     private Button btnSave;
 
-    public MyApplicant applicant;
-
-    {
-        applicant = new MyApplicant();
-    }
 
     private EditText clientname1;
     private EditText groupname1;
@@ -53,6 +48,13 @@ public class AddApplicant extends AppCompatActivity {
 
     private void openActivity() {
         Intent intent = new Intent(this, GrossDailySales.class);
+        MyBusiness business = (MyBusiness) getApplicationContext();
+        MyApplicant applicant = (MyApplicant) getApplicationContext();
+        MyOtherOperatingCost otherOperatingCost = (MyOtherOperatingCost) getApplicationContext();
+        MyHousehold household = (MyHousehold) getApplicationContext();
+        MyOperatingCost operatingCost = (MyOperatingCost) getApplicationContext();
+        MyHouseholdExpense householdExpense = (MyHouseholdExpense) getApplicationContext();
+        MyHouseholdIncome householdIncome = (MyHouseholdIncome) getApplicationContext();
        applicant.setClientname(clientname1.getText().toString());
         applicant.setGroupname(groupname1.getText().toString());
         applicant.setBranchname(branch1.getText().toString());

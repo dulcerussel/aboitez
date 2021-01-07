@@ -36,6 +36,11 @@ public class MyOtherOperatingCost extends Application {
                 '}';
     }
 
+    public void CalculateLoss(float x){
+        float d = (float)0.4;
+        setLoss(x*d);
+    }
+
     public int getId() {
         return id;
     }

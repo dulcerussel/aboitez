@@ -34,15 +34,16 @@
                 android:textColor="#000000"
                 android:text="Total Computation"
                 android:layout_marginTop="10dp" />
+
             <TextView
 
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
                 android:paddingLeft="110dp"
+                android:text="Weekly Sales:"
                 android:textColor="#000000"
-                android:textSize="20sp"
-                android:text="Weakly Sales:"
-                android:layout_marginTop="10dp" />
+                android:textSize="20sp" />
 
             <TextView
                 android:id="@+id/textView34"
@@ -74,11 +75,11 @@
 
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
                 android:paddingLeft="23dp"
-                android:textSize="20sp"
+                android:text="Weekly Standard Sales:"
                 android:textColor="#000000"
-                android:text="Weakly Standard Sales:"
-                android:layout_marginTop="10dp" />
+                android:textSize="20sp" />
 
             <TextView
                 android:id="@+id/textView32"
@@ -110,12 +111,12 @@
 
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
                 android:paddingLeft="100dp"
+                android:text="Weekly Net Profit:"
                 android:textColor="#000000"
                 android:textSize="20sp"
-                android:textStyle="bold|italic"
-                android:text="Weakly Net Profit:"
-                android:layout_marginTop="10dp" />
+                android:textStyle="bold|italic" />
 
             <TextView
                 android:id="@+id/textView30"
