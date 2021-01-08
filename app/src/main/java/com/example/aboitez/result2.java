@@ -27,16 +27,16 @@ public class result2 extends AppCompatActivity {
         this.txtNethouseholdexpense = (TextView) findViewById(R.id.textView29);
 
         //calculate
-        household.CalculateNetHouseholdIncome();
-        household.CalculateExpectedHouseHoldExpense();
+//        household.CalculateNetHouseholdIncome();
+//        household.CalculateExpectedHouseHoldExpense();
 
 
-        txtHouseholdincome.setText(String.valueOf(household.getGrosshouseincome()));
-        txtHouseholdexpense.setText(String.valueOf(household.getGrosshouseexpense()));
-        txtNethouseholdincome.setText(String.valueOf(household.getNethouseincome()));
-        txtGrossPersonalIncome.setText(String.valueOf(household.getGrosspersonalincome()));
-        txtFamilyLocSize.setText(String.valueOf(household.getFamilylocsize()));
-        txtNethouseholdexpense.setText(String.valueOf(household.getExpectedhouseexpense()));
+        txtHouseholdincome.setText(String.valueOf(GlobalVariable.grosshouseincome));
+        txtHouseholdexpense.setText(String.valueOf(GlobalVariable.grosshouseexpense));
+        txtNethouseholdincome.setText(String.valueOf(GlobalVariable.nethouseincome));
+        txtGrossPersonalIncome.setText(String.valueOf(GlobalVariable.grosspersonalincome));
+        txtFamilyLocSize.setText(String.valueOf(GlobalVariable.familylocsize));
+        txtNethouseholdexpense.setText(String.valueOf(GlobalVariable.expectedhouseexpense));
 
         button4 = (Button) findViewById(R.id.btnTotalCom);
         button4.setOnClickListener(new View.OnClickListener() {

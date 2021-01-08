@@ -14,11 +14,11 @@ public class Result1 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_result1);
 
-        MyBusiness business = new MyBusiness();
-
-        MyOtherOperatingCost otherOperatingCost = new MyOtherOperatingCost();
-
-        MyOperatingCost operatingCost = new MyOperatingCost();
+//        MyBusiness business = new MyBusiness();
+//
+//        MyOtherOperatingCost otherOperatingCost = new MyOtherOperatingCost();
+//
+//        MyOperatingCost operatingCost = new MyOperatingCost();
 
 
         TextView txtWeeklySales = (TextView) findViewById(R.id.textView34);
@@ -34,17 +34,19 @@ public class Result1 extends AppCompatActivity {
 
 
 
-        txtWeeklySales.setText(String.valueOf(business.getWeeklysales()));
-        txtDailyAveSales.setText(String.valueOf(business.getDailyavesales()));
-        txtWeeklyStandSales.setText(String.valueOf(business.getWeeklystandsales()));
-        txtDailyStandSales.setText(String.valueOf(business.getDailystandavesales()));
-        txtWeeklyNetProfit.setText(String.valueOf(business.getNetprofit()));
-        txtActualyMarkup.setText(String.valueOf(business.getActualmarkup()));
+        txtWeeklySales.setText(String.valueOf(GlobalVariable.weeklysales));
+        txtDailyAveSales.setText(String.valueOf(GlobalVariable.dailyavesales));
+        txtWeeklyStandSales.setText(String.valueOf(GlobalVariable.weeklystandsales));
+        txtDailyStandSales.setText(String.valueOf(GlobalVariable.dailystandavesales));
+        txtWeeklyNetProfit.setText(String.valueOf(GlobalVariable.netprofit));
+        txtActualyMarkup.setText(String.valueOf(GlobalVariable.actualmarkup));
         txtStandardMarkUp.setText("25%");
-        otherOperatingCost.CalculateLoss(operatingCost.getWeeklypurchase());
-        txtLoses.setText(String.valueOf(otherOperatingCost.getLoss()));
-        txtTotalWeeklyPurchase.setText(String.valueOf(operatingCost.getWeeklypurchase()));
-        txtTotalCost.setText(String.valueOf(business.getNetcost()));
+        //Calculate
+//        otherOperatingCost.CalculateLoss(GlobalVariable.weeklypurchase());
+
+        txtLoses.setText(String.valueOf(GlobalVariable.loss));
+        txtTotalWeeklyPurchase.setText(String.valueOf(GlobalVariable.weeklypurchase));
+        txtTotalCost.setText(String.valueOf(GlobalVariable.netcost));
 
         Button button = (Button) findViewById(R.id.btnCon);
         button.setOnClickListener(new View.OnClickListener() {

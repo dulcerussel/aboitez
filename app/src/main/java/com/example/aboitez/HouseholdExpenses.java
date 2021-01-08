@@ -46,14 +46,23 @@ public class HouseholdExpenses extends AppCompatActivity {
         String HouseHoldOtherPrice= cost.getText().toString();
 
 
-        MyHouseholdExpense householdExpense = new MyHouseholdExpense();
+//        MyHouseholdExpense householdExpense = new MyHouseholdExpense();
+//
+//        householdExpense.setHouseutilies(Float.parseFloat(HouseHoldUtilies));
+//        householdExpense.setHouserent(Float.parseFloat(HouseHoldRent));
+//        householdExpense.setHousefood(Float.parseFloat(HouseHoldFoodGroceries));
+//        householdExpense.setHousemedicine(Float.parseFloat(HouseHoldMedicine));
+//        householdExpense.setHouseeduc(Float.parseFloat(HouseHoldEducationAllowance));
+//        householdExpense.setOtherexpense(Float.parseFloat(HouseHoldOtherPrice));
 
-        householdExpense.setHouseutilies(Float.parseFloat(HouseHoldUtilies));
-        householdExpense.setHouserent(Float.parseFloat(HouseHoldRent));
-        householdExpense.setHousefood(Float.parseFloat(HouseHoldFoodGroceries));
-        householdExpense.setHousemedicine(Float.parseFloat(HouseHoldMedicine));
-        householdExpense.setHouseeduc(Float.parseFloat(HouseHoldEducationAllowance));
-        householdExpense.setOtherexpense(Float.parseFloat(HouseHoldOtherPrice));
+        GlobalVariable.houseutilies = Float.parseFloat(HouseHoldUtilies);
+        GlobalVariable.houserent = Float.parseFloat(HouseHoldRent);
+        GlobalVariable.housefood = Float.parseFloat(HouseHoldFoodGroceries);
+        GlobalVariable.housemedicine = Float.parseFloat(HouseHoldMedicine);
+        GlobalVariable.houseeduc = Float.parseFloat(HouseHoldEducationAllowance);
+        GlobalVariable.otherexpense = Float.parseFloat(HouseHoldOtherPrice);
+
+
 
         startActivity(intent);
     }

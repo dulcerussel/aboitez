@@ -46,18 +46,26 @@ public class AddApplicant extends AppCompatActivity {
 
     private void openActivity() {
         Intent intent = new Intent(this, GrossDailySales.class);
+//      MyApplicant applicant = new MyApplicant();
 
-        MyApplicant applicant = new MyApplicant();
+        GlobalVariable.clientname = clientname1.getText().toString();
+        GlobalVariable.groupname = groupname1.getText().toString();
+        GlobalVariable.branchname = branch1.getText().toString();
+        GlobalVariable.area = area1.getText().toString();
+        GlobalVariable.dateconducted =  date1.getText().toString();
+        GlobalVariable.loanapplied = loanapplied1.getText().toString();
+        GlobalVariable.businessname = businessname1.getText().toString();
+        GlobalVariable.businesstype = businesstype1.getText().toString();
 
 
-        applicant.setClientname(clientname1.getText().toString());
-        applicant.setGroupname(groupname1.getText().toString());
-        applicant.setBranchname(branch1.getText().toString());
-        applicant.setArea(area1.getText().toString());
-        applicant.setDateconducted(date1.getText().toString());
-        applicant.setLoanapplied(loanapplied1.getText().toString());
-        applicant.setBusinessname(businessname1.getText().toString());
-        applicant.setBusinesstype(businesstype1.getText().toString());
+//        applicant.setClientname(clientname1.getText().toString());
+//        applicant.setGroupname(groupname1.getText().toString());
+//        applicant.setBranchname(branch1.getText().toString());
+//        applicant.setArea(area1.getText().toString());
+//        applicant.setDateconducted(date1.getText().toString());
+//        applicant.setLoanapplied(loanapplied1.getText().toString());
+//        applicant.setBusinessname(businessname1.getText().toString());
+//        applicant.setBusinesstype(businesstype1.getText().toString());
 
 
         startActivity(intent);

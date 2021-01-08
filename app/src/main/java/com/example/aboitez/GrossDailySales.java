@@ -13,8 +13,6 @@ public class GrossDailySales extends AppCompatActivity implements ExampleDialog.
     private TextView monday1, tuesday1, wednesday1, thursday1, friday1, saturday1, sunday1;
     private Button button, button2;
 
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 

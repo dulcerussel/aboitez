@@ -49,12 +49,18 @@ public class OtherOperatingCosts extends AppCompatActivity {
 
     private void OpenResult1() {
 
-        MyOtherOperatingCost otherOperatingCost = new MyOtherOperatingCost();
+//        MyOtherOperatingCost otherOperatingCost = new MyOtherOperatingCost();
+//
+//        otherOperatingCost.setLoss(Float.parseFloat(this.loses.getText().toString()));
+//        otherOperatingCost.setTranspo(Float.parseFloat(this.fuel.getText().toString()));
+//        otherOperatingCost.setSalaries(Float.parseFloat(this.salaries.getText().toString()));
+//        otherOperatingCost.setOthers(Float.parseFloat(this.others1.getText().toString()));
 
-        otherOperatingCost.setLoss(Float.parseFloat(this.loses.getText().toString()));
-        otherOperatingCost.setTranspo(Float.parseFloat(this.fuel.getText().toString()));
-        otherOperatingCost.setSalaries(Float.parseFloat(this.salaries.getText().toString()));
-        otherOperatingCost.setOthers(Float.parseFloat(this.others1.getText().toString()));
+
+        GlobalVariable.loss = Float.parseFloat(this.loses.getText().toString());
+        GlobalVariable.transpo = Float.parseFloat(this.fuel.getText().toString());
+        GlobalVariable.salaries = Float.parseFloat(this.salaries.getText().toString());
+        GlobalVariable.others = Float.parseFloat(this.others1.getText().toString());
 
         Intent intent = new Intent(this, Result1.class);
         startActivity(intent);

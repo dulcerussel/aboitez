@@ -31,27 +31,27 @@ public class totalCompute extends AppCompatActivity {
         this.txtmaxloanamount = (TextView) findViewById(R.id.textView41);
 
         //calculate
-        float x = business.getNetprofit();
-        float y = household.getNethouseincome();
+//        float x = business.getNetprofit();
+//        float y = household.getNethouseincome();
+//
+//
+//
+//        application.CalculateNetBusinessIncome(x);
+//        application.CalculateNetCombineIncome(x,y);
+//
+//        float w = application.getTotalnetcombineincome();
+//
+//        application.CalculateAdjustedDebtCapacity(w);
+//        application.CalculateADCxTerms();
+//        application.MaxLoanAmountAvailment();
 
-
-
-        application.CalculateNetBusinessIncome(x);
-        application.CalculateNetCombineIncome(x,y);
-
-        float w = application.getTotalnetcombineincome();
-
-        application.CalculateAdjustedDebtCapacity(w);
-        application.CalculateADCxTerms();
-        application.MaxLoanAmountAvailment();
-
-        txttotalhousehold.setText(String.valueOf(application.getHousehold_total()));
-        txttotalbusiness.setText(String.valueOf(application.getBusiness_total()));
-        txttotalnetcombineincome.setText(String.valueOf(application.getTotalnetcombineincome()));
-        txtadc.setText(String.valueOf(application.getAdc()));
-        loanterms.setText(String.valueOf(application.getLoanterm()));
-        txtadcxterms.setText(String.valueOf(application.getAdcxterms()));
-        txtmaxloanamount.setText(String.valueOf(application.getMaxloanamount()));
+        txttotalhousehold.setText(String.valueOf(GlobalVariable.household_total));
+        txttotalbusiness.setText(String.valueOf(GlobalVariable.business_total));
+        txttotalnetcombineincome.setText(String.valueOf(GlobalVariable.totalnetcombineincome));
+        txtadc.setText(String.valueOf(GlobalVariable.adc));
+        loanterms.setText(String.valueOf(GlobalVariable.loanterm));
+        txtadcxterms.setText(String.valueOf(GlobalVariable.adcxterms));
+        txtmaxloanamount.setText(String.valueOf(GlobalVariable.maxloanamount));
 
         button5 = (Button) findViewById(R.id.btnDone);
         button5.setOnClickListener(new View.OnClickListener() {
