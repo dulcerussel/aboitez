@@ -66,6 +66,15 @@
             android:layout_height="318dp"
             android:layout_weight="0" />
     </LinearLayout>
+
+    <EditText
+        android:id="@+id/editTextNumberDecimal"
+        android:layout_width="388dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="0"
+        android:ems="10"
+        android:inputType="numberDecimal" />
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="52dp"
@@ -77,8 +86,13 @@
             android:layout_width="99dp"
             android:layout_height="wrap_content"
             android:layout_weight="0"
-            android:text="Add" />
+            android:text="Add" /><![CDATA[
+
+
+
         />
+
+    ]]>
     </LinearLayout>
 
     <LinearLayout

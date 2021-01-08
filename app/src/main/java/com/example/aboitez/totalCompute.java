@@ -16,15 +16,11 @@ public class totalCompute extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_total_compute);
 
-        MyBusiness business = (MyBusiness) getApplicationContext();
-        MyApplicant applicant = (MyApplicant) getApplicationContext();
-        MyApplication application = (MyApplication) getApplicationContext();
-        MyOtherOperatingCost otherOperatingCost = (MyOtherOperatingCost) getApplicationContext();
-        MyHousehold household = (MyHousehold) getApplicationContext();
-        MyOperatingCost operatingCost = (MyOperatingCost) getApplicationContext();
-        MyHouseholdExpense householdExpense = (MyHouseholdExpense) getApplicationContext();
-        MyHouseholdIncome householdIncome = (MyHouseholdIncome) getApplicationContext();
+        MyBusiness business = new MyBusiness();
 
+        MyApplication application = new MyApplication();
+
+        MyHousehold household = new MyHousehold();
 
         this.txttotalhousehold = (TextView) findViewById(R.id.textView47);
         this.txttotalbusiness = (TextView) findViewById(R.id.textView46);

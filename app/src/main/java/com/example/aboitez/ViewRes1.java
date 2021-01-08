@@ -16,13 +16,12 @@ public class ViewRes1 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_view_res1);
         button = (Button) findViewById(R.id.btnNext2);
-        MyBusiness business = (MyBusiness) getApplicationContext();
-        MyApplicant applicant = (MyApplicant) getApplicationContext();
-        MyOtherOperatingCost otherOperatingCost = (MyOtherOperatingCost) getApplicationContext();
-        MyHousehold household = (MyHousehold) getApplicationContext();
-        MyOperatingCost operatingCost = (MyOperatingCost) getApplicationContext();
-        MyHouseholdExpense householdExpense = (MyHouseholdExpense) getApplicationContext();
-        MyHouseholdIncome householdIncome = (MyHouseholdIncome) getApplicationContext();
+        MyBusiness business = new MyBusiness();
+
+        MyOtherOperatingCost otherOperatingCost = new MyOtherOperatingCost();
+
+        MyOperatingCost operatingCost = new MyOperatingCost();
+
 
 
         this.txtWeeklySales = (TextView) findViewById(R.id.textView34);

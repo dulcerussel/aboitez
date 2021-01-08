@@ -9,34 +9,28 @@ import android.widget.Button;
 import android.widget.TextView;
 
 public class Result1 extends AppCompatActivity {
-    private Button button;
-    private TextView txtWeeklySales,txtDailyAveSales,txtWeeklyStandSales,txtDailyStandSales,txtWeeklyNetProfit,txtActualyMarkup,txtStandardMarkUp,txtLoses,txtTotalWeeklyPurchase,txtTotalCost;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_result1);
 
-        MyBusiness business = (MyBusiness) getApplicationContext();
-        MyApplicant applicant = (MyApplicant) getApplicationContext();
-        MyOtherOperatingCost otherOperatingCost = (MyOtherOperatingCost) getApplicationContext();
-        MyHousehold household = (MyHousehold) getApplicationContext();
-        MyOperatingCost operatingCost = (MyOperatingCost) getApplicationContext();
-        MyHouseholdExpense householdExpense = (MyHouseholdExpense) getApplicationContext();
-        MyHouseholdIncome householdIncome = (MyHouseholdIncome) getApplicationContext();
+        MyBusiness business = new MyBusiness();
+
+        MyOtherOperatingCost otherOperatingCost = new MyOtherOperatingCost();
+
+        MyOperatingCost operatingCost = new MyOperatingCost();
 
 
-
-
-        this.txtWeeklySales = (TextView) findViewById(R.id.textView34);
-        this.txtDailyAveSales = (TextView) findViewById(R.id.textView33);
-        this.txtWeeklyStandSales = (TextView) findViewById(R.id.textView32);
-        this.txtDailyStandSales = (TextView) findViewById(R.id.textView31);
-        this.txtWeeklyNetProfit = (TextView) findViewById(R.id.textView30);
-        this.txtActualyMarkup = (TextView) findViewById(R.id.textView29);
-        this.txtStandardMarkUp = (TextView) findViewById(R.id.textView28);
-        this.txtLoses = (TextView) findViewById(R.id.textView27);
-        this.txtTotalWeeklyPurchase = (TextView) findViewById(R.id.textView26);
-        this.txtTotalCost = (TextView) findViewById(R.id.textView25);
+        TextView txtWeeklySales = (TextView) findViewById(R.id.textView34);
+        TextView txtDailyAveSales = (TextView) findViewById(R.id.textView33);
+        TextView txtWeeklyStandSales = (TextView) findViewById(R.id.textView32);
+        TextView txtDailyStandSales = (TextView) findViewById(R.id.textView31);
+        TextView txtWeeklyNetProfit = (TextView) findViewById(R.id.textView30);
+        TextView txtActualyMarkup = (TextView) findViewById(R.id.textView29);
+        TextView txtStandardMarkUp = (TextView) findViewById(R.id.textView28);
+        TextView txtLoses = (TextView) findViewById(R.id.textView27);
+        TextView txtTotalWeeklyPurchase = (TextView) findViewById(R.id.textView26);
+        TextView txtTotalCost = (TextView) findViewById(R.id.textView25);
 
 
 
@@ -52,7 +46,7 @@ public class Result1 extends AppCompatActivity {
         txtTotalWeeklyPurchase.setText(String.valueOf(operatingCost.getWeeklypurchase()));
         txtTotalCost.setText(String.valueOf(business.getNetcost()));
 
-        button = (Button) findViewById(R.id.btnCon);
+        Button button = (Button) findViewById(R.id.btnCon);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

@@ -36,9 +36,11 @@
             android:textSize="15sp"></TextView>
 
     </TableRow>
+
     <TextView
-        android:layout_height="wrap_content"
-        android:layout_width="wrap_content"></TextView>
+        android:id="@+id/loses1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"></TextView>
     <TableRow android:background="#FFFFFF" android:padding="5dp">
         <TextView
             android:layout_width="wrap_content"
@@ -54,9 +56,11 @@
             android:textSize="15sp"/>
 
     </TableRow>
+
     <TextView
-        android:layout_height="wrap_content"
-        android:layout_width="wrap_content"></TextView>
+        android:id="@+id/loses2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"></TextView>
     <TableRow android:background="#FFFFFF" android:padding="5dp">
         <TextView
             android:layout_width="wrap_content"
@@ -72,9 +76,11 @@
             android:textSize="15sp"></TextView>
         />
     </TableRow>
+
     <TextView
-        android:layout_height="wrap_content"
-        android:layout_width="wrap_content"></TextView>
+        android:id="@+id/salary1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"></TextView>
     <TableRow android:background="#FFFFFF" android:padding="5dp">
         <TextView
             android:layout_width="wrap_content"
@@ -114,9 +120,11 @@
             android:textSize="15sp"></TextView>
         />
     </TableRow>
+
     <TextView
-        android:layout_height="wrap_content"
-        android:layout_width="wrap_content"></TextView>
+        android:id="@+id/other1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"></TextView>
     <TableRow android:background="#FFFFFF" android:padding="5dp">
         <TextView
             android:layout_width="wrap_content"
@@ -137,9 +145,11 @@
             android:textSize="15sp"></TextView>
         />
     </TableRow>
+
     <TextView
-        android:layout_height="wrap_content"
-        android:layout_width="wrap_content"></TextView>
+        android:id="@+id/other2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"></TextView>
     <TableRow android:background="#FFFFFF" android:padding="5dp">
         <TextView
             android:layout_width="wrap_content"
@@ -162,35 +172,31 @@
         />
     </TableRow>
     <TableRow android:background="#FFFFFF" android:padding="5dp">
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="" />
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="" />
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="" />
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="" />
 
-        <Button
-            android:id="@+id/buttonOtherCosts"
+        <TextView
+            android:id="@+id/other3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginRight="130dp"
-            android:layout_weight="0"
-            android:text="Add" />
+            android:layout_weight="1"
+            android:text="" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="" /><![CDATA[
+
         />
+    ]]>
     </TableRow>
     <LinearLayout android:background="#FFFFFF" android:paddingLeft="90dp" android:paddingRight="90dp"
         android:paddingTop="60dp"

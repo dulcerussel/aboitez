@@ -16,13 +16,8 @@ public class result2 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_result2);
 
-        MyBusiness business = (MyBusiness) getApplicationContext();
-        MyApplicant applicant = (MyApplicant) getApplicationContext();
-        MyOtherOperatingCost otherOperatingCost = (MyOtherOperatingCost) getApplicationContext();
-        MyHousehold household = (MyHousehold) getApplicationContext();
-        MyOperatingCost operatingCost = (MyOperatingCost) getApplicationContext();
-        MyHouseholdExpense householdExpense = (MyHouseholdExpense) getApplicationContext();
-        MyHouseholdIncome householdIncome = (MyHouseholdIncome) getApplicationContext();
+
+        MyHousehold household = new MyHousehold();
 
         this.txtHouseholdincome = (TextView) findViewById(R.id.textView34);
         this.txtHouseholdexpense = (TextView) findViewById(R.id.textView33);
