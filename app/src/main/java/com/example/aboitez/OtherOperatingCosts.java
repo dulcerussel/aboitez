@@ -21,13 +21,10 @@ public class OtherOperatingCosts extends AppCompatActivity {
     private EditText others2;
     private EditText others3;
 
-    @SuppressLint("WrongViewCast")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_other_operating_costs);
-
-
 
         this.loses = findViewById(R.id.loses1);
         this.fuel = findViewById(R.id.loses2);

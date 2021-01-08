@@ -37,10 +37,10 @@
 
     </TableRow>
 
-    <TextView
+    <EditText
         android:id="@+id/loses1"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"></TextView>
+        android:layout_height="wrap_content"></EditText>
     <TableRow android:background="#FFFFFF" android:padding="5dp">
         <TextView
             android:layout_width="wrap_content"
@@ -57,10 +57,10 @@
 
     </TableRow>
 
-    <TextView
+    <EditText
         android:id="@+id/loses2"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"></TextView>
+        android:layout_height="wrap_content"></EditText>
     <TableRow android:background="#FFFFFF" android:padding="5dp">
         <TextView
             android:layout_width="wrap_content"
@@ -77,10 +77,10 @@
         />
     </TableRow>
 
-    <TextView
+    <EditText
         android:id="@+id/salary1"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"></TextView>
+        android:layout_height="wrap_content"></EditText>
     <TableRow android:background="#FFFFFF" android:padding="5dp">
         <TextView
             android:layout_width="wrap_content"
@@ -121,10 +121,10 @@
         />
     </TableRow>
 
-    <TextView
+    <EditText
         android:id="@+id/other1"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"></TextView>
+        android:layout_height="wrap_content"></EditText>
     <TableRow android:background="#FFFFFF" android:padding="5dp">
         <TextView
             android:layout_width="wrap_content"
@@ -146,10 +146,10 @@
         />
     </TableRow>
 
-    <TextView
+    <EditText
         android:id="@+id/other2"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"></TextView>
+        android:layout_height="wrap_content"></EditText>
     <TableRow android:background="#FFFFFF" android:padding="5dp">
         <TextView
             android:layout_width="wrap_content"
@@ -173,7 +173,7 @@
     </TableRow>
     <TableRow android:background="#FFFFFF" android:padding="5dp">
 
-        <TextView
+        <EditText
             android:id="@+id/other3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

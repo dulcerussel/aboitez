@@ -18,8 +18,8 @@ public class OperatingCost extends AppCompatActivity {
     private ListView lv;
     private EditText Et;
 
-    ArrayList<Float> list;
-    ArrayAdapter<Float> adapter;
+    ArrayList<String> list;
+    ArrayAdapter<String> adapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,14 +41,14 @@ public class OperatingCost extends AppCompatActivity {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Float result = Float.valueOf(Et.getText().toString());
+                String result = Et.getText().toString();
                 list.add(result);
                 adapter.notifyDataSetChanged();
             }
         });
 
-        list  = new ArrayList<Float>();
-        adapter = new ArrayAdapter<Float>(this, android.R.layout.simple_list_item_1,list);
+        list  = new ArrayList<String>();
+        adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1,list);
 
         lv.setAdapter(adapter);
     }

@@ -49,16 +49,23 @@ public class GrossDailySales extends AppCompatActivity implements ExampleDialog.
     private void OpenOperatingCost() {
         Intent intent = new Intent(this, OperatingCost.class);
 
-        MyBusiness business = new MyBusiness();
+//        MyBusiness business = new MyBusiness();
+//
+//        business.setMonday(Float.parseFloat(monday1.getText().toString()));
+//        business.setTuesday(Float.parseFloat(tuesday1.getText().toString()));
+//        business.setWednesday(Float.parseFloat(wednesday1.getText().toString()));
+//        business.setThursday(Float.parseFloat(thursday1.getText().toString()));
+//        business.setFriday(Float.parseFloat(friday1.getText().toString()));
+//        business.setSaturday(Float.parseFloat(saturday1.getText().toString()));
+//        business.setSunday(Float.parseFloat(sunday1.getText().toString()));
 
-        business.setMonday(Float.parseFloat(monday1.getText().toString()));
-        business.setTuesday(Float.parseFloat(tuesday1.getText().toString()));
-        business.setWednesday(Float.parseFloat(wednesday1.getText().toString()));
-        business.setThursday(Float.parseFloat(thursday1.getText().toString()));
-        business.setFriday(Float.parseFloat(friday1.getText().toString()));
-        business.setSaturday(Float.parseFloat(saturday1.getText().toString()));
-        business.setSunday(Float.parseFloat(sunday1.getText().toString()));
-
+        GlobalVariable.monday =Float.parseFloat(monday1.getText().toString());
+        GlobalVariable.tuesday =Float.parseFloat(tuesday1.getText().toString());
+        GlobalVariable.wednesday =Float.parseFloat(wednesday1.getText().toString());
+        GlobalVariable.thursday =Float.parseFloat(thursday1.getText().toString());
+        GlobalVariable.friday =Float.parseFloat(friday1.getText().toString());
+        GlobalVariable.saturday =Float.parseFloat(saturday1.getText().toString());
+        GlobalVariable.sunday =Float.parseFloat(sunday1.getText().toString());
 
         startActivity(intent);
     }
