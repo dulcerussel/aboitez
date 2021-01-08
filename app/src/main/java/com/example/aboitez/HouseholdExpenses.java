@@ -45,6 +45,16 @@ public class HouseholdExpenses extends AppCompatActivity {
         String HouseHoldOther = label.getText().toString();
         String HouseHoldOtherPrice= cost.getText().toString();
 
+
+        MyHouseholdExpense householdExpense = new MyHouseholdExpense();
+
+        householdExpense.setHouseutilies(Float.parseFloat(HouseHoldUtilies));
+        householdExpense.setHouserent(Float.parseFloat(HouseHoldRent));
+        householdExpense.setHousefood(Float.parseFloat(HouseHoldFoodGroceries));
+        householdExpense.setHousemedicine(Float.parseFloat(HouseHoldMedicine));
+        householdExpense.setHouseeduc(Float.parseFloat(HouseHoldEducationAllowance));
+        householdExpense.setOtherexpense(Float.parseFloat(HouseHoldOtherPrice));
+
         startActivity(intent);
     }
 
