@@ -66,6 +66,10 @@ public class GrossDailySales extends AppCompatActivity implements ExampleDialog.
         GlobalVariable.friday =Float.parseFloat(friday1.getText().toString());
         GlobalVariable.saturday =Float.parseFloat(saturday1.getText().toString());
         GlobalVariable.sunday =Float.parseFloat(sunday1.getText().toString());
+        //calculate
+        GlobalVariable.weeklysales = GlobalVariable.monday+GlobalVariable.tuesday+GlobalVariable.wednesday+GlobalVariable.thursday+GlobalVariable.friday+GlobalVariable.saturday+GlobalVariable.sunday;
+        GlobalVariable.dailyavesales = GlobalVariable.weeklysales/7;
+
 
         startActivity(intent);
     }

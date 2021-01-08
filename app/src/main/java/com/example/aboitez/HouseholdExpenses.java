@@ -62,6 +62,9 @@ public class HouseholdExpenses extends AppCompatActivity {
         GlobalVariable.houseeduc = Float.parseFloat(HouseHoldEducationAllowance);
         GlobalVariable.otherexpense = Float.parseFloat(HouseHoldOtherPrice);
 
+        //calculate
+
+
 
 
         startActivity(intent);
