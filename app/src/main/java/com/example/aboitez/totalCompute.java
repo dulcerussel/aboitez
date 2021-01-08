@@ -13,6 +13,14 @@ public class totalCompute extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_total_compute);
+
+        MyBusiness business = (MyBusiness) getApplicationContext();
+        MyApplicant applicant = (MyApplicant) getApplicationContext();
+        MyOtherOperatingCost otherOperatingCost = (MyOtherOperatingCost) getApplicationContext();
+        MyHousehold household = (MyHousehold) getApplicationContext();
+        MyOperatingCost operatingCost = (MyOperatingCost) getApplicationContext();
+        MyHouseholdExpense householdExpense = (MyHouseholdExpense) getApplicationContext();
+        MyHouseholdIncome householdIncome = (MyHouseholdIncome) getApplicationContext();
         button5 = (Button) findViewById(R.id.btnDone);
         button5.setOnClickListener(new View.OnClickListener() {
             @Override
