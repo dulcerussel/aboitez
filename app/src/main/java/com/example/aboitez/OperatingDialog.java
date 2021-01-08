@@ -2,6 +2,7 @@ package com.example.aboitez;
 
 import android.app.AlertDialog;
 import android.app.Dialog;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -9,10 +10,16 @@ import android.view.View;
 import android.widget.EditText;
 
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatDialogFragment;
+
+import java.util.ArrayList;
 
 public class OperatingDialog extends AppCompatDialogFragment {
     private EditText item, costs, sales, wp;
+    ArrayList<MyOperatingCost> list = new ArrayList<>();
+    private ExampleDialogListener listener;
+
     @Override
     public Dialog onCreateDialog( Bundle savedInstanceState) {
         AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
@@ -29,6 +36,14 @@ public class OperatingDialog extends AppCompatDialogFragment {
                 .setPositiveButton("Add", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
+                        String txtitem = item.getText().toString();
+                        float txtcosts = Float.parseFloat(costs.getText().toString());
+                        float txtsales = Float.parseFloat(sales.getText().toString());
+                        float txtwp = Float.parseFloat(wp.getText().toString());
+                        int txtmarkup = (int) ((txtsales-txtcosts) / txtcosts);
+
+                        MyOperatingCost cost = new MyOperatingCost(txtitem,txtcosts,txtsales,txtmarkup,txtwp);
+                        list.add(cost);
 
                     }
                 });
@@ -36,6 +51,21 @@ public class OperatingDialog extends AppCompatDialogFragment {
         costs = view.findViewById(R.id.edit_costs);
         sales = view.findViewById(R.id.edit_sales);
         wp = view.findViewById(R.id.edit_wp);
+
         return builder.create();
+    }
+
+    public void onAttach(@NonNull Context context) {
+        super.onAttach(context);
+        try {
+            listener = (ExampleDialogListener) context;
+        } catch (ClassCastException e) {
+            throw new ClassCastException(context.toString() +
+                    "must implement ExampleDialogListener");
+        }
+    }
+
+    public interface ExampleDialogListener{
+        void applyTexts(String MonSales, String TueSales, String WedSales, String ThuSales, String FriSales, String SatSales, String SunSales);
     }
 }

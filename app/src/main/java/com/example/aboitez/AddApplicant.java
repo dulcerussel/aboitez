@@ -10,7 +10,6 @@ import android.widget.EditText;
 
 public class AddApplicant extends AppCompatActivity {
     private Button button;
-    private Button btnSave;
 
 
     private EditText clientname1;
@@ -27,7 +26,6 @@ public class AddApplicant extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_applicant);
         button = (Button) findViewById(R.id.BtnAddAppli);
-        btnSave = findViewById(R.id.btnSave1);
         this.clientname1 = (EditText) findViewById(R.id.nameofclient);
         this.groupname1 = (EditText) findViewById(R.id.groupname);
         this.branch1 = (EditText) findViewById(R.id.branch);
@@ -48,14 +46,11 @@ public class AddApplicant extends AppCompatActivity {
 
     private void openActivity() {
         Intent intent = new Intent(this, GrossDailySales.class);
-        MyBusiness business = (MyBusiness) getApplicationContext();
-        MyApplicant applicant = (MyApplicant) getApplicationContext();
-        MyOtherOperatingCost otherOperatingCost = (MyOtherOperatingCost) getApplicationContext();
-        MyHousehold household = (MyHousehold) getApplicationContext();
-        MyOperatingCost operatingCost = (MyOperatingCost) getApplicationContext();
-        MyHouseholdExpense householdExpense = (MyHouseholdExpense) getApplicationContext();
-        MyHouseholdIncome householdIncome = (MyHouseholdIncome) getApplicationContext();
-       applicant.setClientname(clientname1.getText().toString());
+
+        MyApplicant applicant = new MyApplicant();
+
+
+        applicant.setClientname(clientname1.getText().toString());
         applicant.setGroupname(groupname1.getText().toString());
         applicant.setBranchname(branch1.getText().toString());
         applicant.setArea(area1.getText().toString());

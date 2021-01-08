@@ -51,15 +51,15 @@ public class GrossDailySales extends AppCompatActivity implements ExampleDialog.
     private void OpenOperatingCost() {
         Intent intent = new Intent(this, OperatingCost.class);
 
-        MyBusiness business = (MyBusiness) getApplicationContext();
+        MyBusiness business = new MyBusiness();
 
-        business.setMonday(Float.valueOf(monday1.getText().toString()));
-        business.setTuesday(Float.valueOf(tuesday1.getText().toString()));
-        business.setWednesday(Float.valueOf(wednesday1.getText().toString()));
-        business.setThursday(Float.valueOf(thursday1.getText().toString()));
-        business.setFriday(Float.valueOf(friday1.getText().toString()));
-        business.setSaturday(Float.valueOf(saturday1.getText().toString()));
-        business.setSunday(Float.valueOf(sunday1.getText().toString()));
+        business.setMonday(Float.parseFloat(monday1.getText().toString()));
+        business.setTuesday(Float.parseFloat(tuesday1.getText().toString()));
+        business.setWednesday(Float.parseFloat(wednesday1.getText().toString()));
+        business.setThursday(Float.parseFloat(thursday1.getText().toString()));
+        business.setFriday(Float.parseFloat(friday1.getText().toString()));
+        business.setSaturday(Float.parseFloat(saturday1.getText().toString()));
+        business.setSunday(Float.parseFloat(sunday1.getText().toString()));
 
 
         startActivity(intent);

@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
@@ -15,8 +16,9 @@ public class OperatingCost extends AppCompatActivity {
     private Button button, button2;
     private ListView lv;
 
-    ArrayList<String> list = new ArrayList<String>();
-    ArrayAdapter<String> adapter;
+    ArrayList<MyOperatingCost> list = new ArrayList<>();
+    OperatingCostAdapter adapter;
+    AdapterView.AdapterContextMenuInfo info;
 
 
     @Override
@@ -26,13 +28,16 @@ public class OperatingCost extends AppCompatActivity {
 
         this.lv = findViewById(R.id.listview);
 
-
+        adapter = new OperatingCostAdapter(this,list);
+        lv.setAdapter(adapter);
+        this.registerForContextMenu(lv);
 
         button2 = (Button) findViewById(R.id.btnNext);
         button2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 OpenOtherOperatingCosts();
+
             }
         });
         button = (Button) findViewById(R.id.imgbutton);
@@ -52,5 +57,6 @@ public class OperatingCost extends AppCompatActivity {
     private void openDialog() {
         OperatingDialog operatingDialog = new OperatingDialog();
         operatingDialog.show(getSupportFragmentManager(),"example dialog");
+        adapter.notifyDataSetChanged();
     }
 }

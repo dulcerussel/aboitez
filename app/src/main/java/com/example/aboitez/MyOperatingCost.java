@@ -23,6 +23,14 @@ public class MyOperatingCost extends Application {
         this.weeklypurchase = weeklypurchase;
     }
 
+    public MyOperatingCost(String item, float cost, float sales, int markup, float weeklypurchase) {
+        this.item = item;
+        this.cost = cost;
+        this.sales = sales;
+        this.markup = markup;
+        this.weeklypurchase = weeklypurchase;
+    }
+
     public MyOperatingCost() {
     }
 
