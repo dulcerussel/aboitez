@@ -2,10 +2,14 @@ package com.example.aboitez;
 
 import android.content.ContentValues;
 import android.content.Context;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+import android.net.Uri;
 
 import androidx.annotation.Nullable;
+
+import java.util.ArrayList;
 
 public class DBHelper extends SQLiteOpenHelper {
 
@@ -22,7 +26,7 @@ public class DBHelper extends SQLiteOpenHelper {
 
 
 
-    public DBHelper(@Nullable Context context, @Nullable String name, @Nullable SQLiteDatabase.CursorFactory factory, int version) {
+    public DBHelper(@Nullable Context context) {
         super(context, DATABASE_NAME, null, 1);
     }
 
@@ -213,6 +217,30 @@ public class DBHelper extends SQLiteOpenHelper {
         result=db.insert(TBL_OTHERCOST,null,cv); //write the data
         db.close();
         return result;
+    }
+
+    public ArrayList<MyOperatingCost> getAllOperatingCost(){
+        SQLiteDatabase db=this.getReadableDatabase();
+        ArrayList<MyOperatingCost> list=new ArrayList<MyOperatingCost>();
+        Cursor c=db.query(TBL_OPERATINGCOST,null,null,null,null,null,"name");
+        //set the record pointer to the first record
+        c.moveToFirst();
+        while(!c.isAfterLast()){
+            int id=c.getInt(c.getColumnIndex("id"));
+            int business_id=c.getInt(c.getColumnIndex("business_id"));
+            String item=c.getString(c.getColumnIndex("item"));
+            float cost=c.getFloat(c.getColumnIndex("cost"));
+            float sales=c.getFloat(c.getColumnIndex("sales"));
+            int markup=c.getInt(c.getColumnIndex("markup"));
+            float weeklypurchase=c.getFloat(c.getColumnIndex("weeklypurchase"));
+
+            MyOperatingCost contact=new MyOperatingCost(id,business_id,item,cost,sales,markup,weeklypurchase);
+            list.add(contact);
+            //iterate the record pointer
+            c.moveToNext();
+        }
+        db.close();
+        return list;
     }
 
 

@@ -21,6 +21,14 @@ public class MyOtherOperatingCost extends Application {
         this.others = others;
     }
 
+    public MyOtherOperatingCost(int business_id, float loss, float transpo, float salaries, float others) {
+        this.business_id = business_id;
+        this.loss = loss;
+        this.transpo = transpo;
+        this.salaries = salaries;
+        this.others = others;
+    }
+
     public MyOtherOperatingCost() {
     }
 

@@ -27,7 +27,16 @@ public class MyApplication extends Application {
         this.maxloanamount = maxloanamount;
     }
 
-
+    public MyApplication(int applicant_id, float business_total, float household_total, float totalnetcombineincome, float adc, String loanterm, float adcxterms, float maxloanamount) {
+        this.applicant_id = applicant_id;
+        this.business_total = business_total;
+        this.household_total = household_total;
+        this.totalnetcombineincome = totalnetcombineincome;
+        this.adc = adc;
+        this.loanterm = loanterm;
+        this.adcxterms = adcxterms;
+        this.maxloanamount = maxloanamount;
+    }
 
     public MyApplication() {
     }

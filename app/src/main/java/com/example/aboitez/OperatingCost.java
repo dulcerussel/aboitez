@@ -16,10 +16,11 @@ import java.util.ArrayList;
 public class OperatingCost extends AppCompatActivity {
     private Button button, button2;
     private ListView lv;
-    private EditText Et;
 
-    ArrayList<String> list;
-    ArrayAdapter<String> adapter;
+    ArrayList<MyOperatingCost> list;
+    MyOperatingCostAdapter adapter;
+    AdapterView.AdapterContextMenuInfo info;
+    DBHelper db;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,7 +28,17 @@ public class OperatingCost extends AppCompatActivity {
         setContentView(R.layout.activity_operating_cost);
 
         this.lv = findViewById(R.id.listview);
-        this.Et = findViewById(R.id.editTextNumberDecimal);
+
+        db = new DBHelper(this);
+
+        if(db.getAllOperatingCost()!=null){
+            list=db.getAllOperatingCost();
+        }
+
+        adapter = new MyOperatingCostAdapter(this,list);
+        lv.setAdapter(adapter);
+        this.registerForContextMenu(lv);
+        adapter.notifyDataSetChanged();
 
         button2 = (Button) findViewById(R.id.btnNext);
         button2.setOnClickListener(new View.OnClickListener() {
@@ -41,16 +52,10 @@ public class OperatingCost extends AppCompatActivity {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String result = Et.getText().toString();
-                list.add(result);
-                adapter.notifyDataSetChanged();
+                openDialog();
             }
         });
 
-        list  = new ArrayList<String>();
-        adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1,list);
-
-        lv.setAdapter(adapter);
     }
 
     private void OpenOtherOperatingCosts() {
@@ -58,8 +63,8 @@ public class OperatingCost extends AppCompatActivity {
         startActivity(intent);
     }
 
-//    private void openDialog() {
-//        OperatingDialog operatingDialog = new OperatingDialog();
-//        operatingDialog.show(getSupportFragmentManager(),"example dialog");
-//    }
+  private void openDialog() {
+      OperatingDialog operatingDialog = new OperatingDialog();
+       operatingDialog.show(getSupportFragmentManager(),"example dialog");
+   }
 }

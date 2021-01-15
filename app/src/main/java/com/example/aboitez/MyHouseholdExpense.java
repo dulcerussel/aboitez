@@ -23,6 +23,16 @@ public class MyHouseholdExpense  extends Application {
         this.otherexpense = otherexpense;
     }
 
+    public MyHouseholdExpense(int household_id, float houseutilies, float houserent, float housefood, float housemedicine, float houseeduc, float otherexpense) {
+        this.household_id = household_id;
+        this.houseutilies = houseutilies;
+        this.houserent = houserent;
+        this.housefood = housefood;
+        this.housemedicine = housemedicine;
+        this.houseeduc = houseeduc;
+        this.otherexpense = otherexpense;
+    }
+
     public MyHouseholdExpense() {
     }
 

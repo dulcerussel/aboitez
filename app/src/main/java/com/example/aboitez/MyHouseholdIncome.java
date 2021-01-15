@@ -21,6 +21,15 @@ public class MyHouseholdIncome extends Application {
         this.amount = amount;
     }
 
+    public MyHouseholdIncome(int household_id, String sourceincome, String details, String type, String freq, float amount) {
+        this.household_id = household_id;
+        this.sourceincome = sourceincome;
+        this.details = details;
+        this.type = type;
+        this.freq = freq;
+        this.amount = amount;
+    }
+
     public MyHouseholdIncome() {
     }
 

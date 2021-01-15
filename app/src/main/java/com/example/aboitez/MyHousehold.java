@@ -23,6 +23,16 @@ public class MyHousehold  extends Application {
         this.expectedhouseexpense = expectedhouseexpense;
     }
 
+    public MyHousehold(int application_id, float grosshouseincome, float grosshouseexpense, float nethouseincome, float grosspersonalincome, String familylocsize, float expectedhouseexpense) {
+        this.application_id = application_id;
+        this.grosshouseincome = grosshouseincome;
+        this.grosshouseexpense = grosshouseexpense;
+        this.nethouseincome = nethouseincome;
+        this.grosspersonalincome = grosspersonalincome;
+        this.familylocsize = familylocsize;
+        this.expectedhouseexpense = expectedhouseexpense;
+    }
+
     public MyHousehold() {
 
     }

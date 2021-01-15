@@ -26,6 +26,16 @@ public class MyApplicant extends Application {
         this.businesstype = businesstype;
     }
 
+    public MyApplicant(String clientname, String groupname, String branchname, String area, String dateconducted, String loanapplied, String businessname, String businesstype) {
+        this.clientname = clientname;
+        this.groupname = groupname;
+        this.branchname = branchname;
+        this.area = area;
+        this.dateconducted = dateconducted;
+        this.loanapplied = loanapplied;
+        this.businessname = businessname;
+        this.businesstype = businesstype;
+    }
 
     public MyApplicant() {
 
