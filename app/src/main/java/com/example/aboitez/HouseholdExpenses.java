@@ -55,23 +55,23 @@ public class HouseholdExpenses extends AppCompatActivity {
 //        householdExpense.setHouseeduc(Float.parseFloat(HouseHoldEducationAllowance));
 //        householdExpense.setOtherexpense(Float.parseFloat(HouseHoldOtherPrice));
 
-        GlobalVariable.houseutilies = Float.parseFloat(HouseHoldUtilies);
-        GlobalVariable.houserent = Float.parseFloat(HouseHoldRent);
-        GlobalVariable.housefood = Float.parseFloat(HouseHoldFoodGroceries);
-        GlobalVariable.housemedicine = Float.parseFloat(HouseHoldMedicine);
-        GlobalVariable.houseeduc = Float.parseFloat(HouseHoldEducationAllowance);
-        GlobalVariable.otherexpense = Float.parseFloat(HouseHoldOtherPrice);
-
-        //calculate and add more on household income
-        GlobalVariable.grosspersonalincome = GlobalVariable.houseutilies+GlobalVariable.houserent+GlobalVariable.housefood+GlobalVariable.housemedicine+GlobalVariable.houseeduc+GlobalVariable.otherexpense;
-        GlobalVariable.familylocsize = "Urban, 1-2 persons";
-        GlobalVariable.expectedhouseexpense = (float) 12000.00;
-        if(GlobalVariable.expectedhouseexpense > GlobalVariable.grosspersonalincome ) {
-            GlobalVariable.grosshouseexpense = GlobalVariable.expectedhouseexpense;
-        }else{
-            GlobalVariable.grosshouseexpense = GlobalVariable.grosshouseincome;
-        }
-        GlobalVariable.nethouseincome = GlobalVariable.grosshouseincome - GlobalVariable.grosshouseexpense;
+//        GlobalVariable.houseutilies = Float.parseFloat(HouseHoldUtilies);
+//        GlobalVariable.houserent = Float.parseFloat(HouseHoldRent);
+//        GlobalVariable.housefood = Float.parseFloat(HouseHoldFoodGroceries);
+//        GlobalVariable.housemedicine = Float.parseFloat(HouseHoldMedicine);
+//        GlobalVariable.houseeduc = Float.parseFloat(HouseHoldEducationAllowance);
+//        GlobalVariable.otherexpense = Float.parseFloat(HouseHoldOtherPrice);
+//
+//        //calculate and add more on household income
+//        GlobalVariable.grosspersonalincome = GlobalVariable.houseutilies+GlobalVariable.houserent+GlobalVariable.housefood+GlobalVariable.housemedicine+GlobalVariable.houseeduc+GlobalVariable.otherexpense;
+//        GlobalVariable.familylocsize = "Urban, 1-2 persons";
+//        GlobalVariable.expectedhouseexpense = (float) 12000.00;
+//        if(GlobalVariable.expectedhouseexpense > GlobalVariable.grosspersonalincome ) {
+//            GlobalVariable.grosshouseexpense = GlobalVariable.expectedhouseexpense;
+//        }else{
+//            GlobalVariable.grosshouseexpense = GlobalVariable.grosshouseincome;
+//        }
+//        GlobalVariable.nethouseincome = GlobalVariable.grosshouseincome - GlobalVariable.grosshouseexpense;
 
 
         startActivity(intent);

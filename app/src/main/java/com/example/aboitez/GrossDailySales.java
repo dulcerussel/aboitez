@@ -13,6 +13,8 @@ public class GrossDailySales extends AppCompatActivity implements ExampleDialog.
     private TextView monday1, tuesday1, wednesday1, thursday1, friday1, saturday1, sunday1;
     private Button button, button2;
 
+//    DBHelper db;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
@@ -28,6 +30,7 @@ public class GrossDailySales extends AppCompatActivity implements ExampleDialog.
         sunday1 = (TextView) findViewById(R.id.Sunday);
         button2 = (Button) findViewById(R.id.btnNext);
 
+//        db = new DBHelper(this);
 
         button2.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -49,16 +52,6 @@ public class GrossDailySales extends AppCompatActivity implements ExampleDialog.
     private void OpenOperatingCost() {
         Intent intent = new Intent(this, OperatingCost.class);
 
-//        MyBusiness business = new MyBusiness();
-//
-//        business.setMonday(Float.parseFloat(monday1.getText().toString()));
-//        business.setTuesday(Float.parseFloat(tuesday1.getText().toString()));
-//        business.setWednesday(Float.parseFloat(wednesday1.getText().toString()));
-//        business.setThursday(Float.parseFloat(thursday1.getText().toString()));
-//        business.setFriday(Float.parseFloat(friday1.getText().toString()));
-//        business.setSaturday(Float.parseFloat(saturday1.getText().toString()));
-//        business.setSunday(Float.parseFloat(sunday1.getText().toString()));
-
         GlobalVariable.monday =Float.parseFloat(monday1.getText().toString());
         GlobalVariable.tuesday =Float.parseFloat(tuesday1.getText().toString());
         GlobalVariable.wednesday =Float.parseFloat(wednesday1.getText().toString());
@@ -69,6 +62,12 @@ public class GrossDailySales extends AppCompatActivity implements ExampleDialog.
         //calculate
         GlobalVariable.weeklysales = GlobalVariable.monday+GlobalVariable.tuesday+GlobalVariable.wednesday+GlobalVariable.thursday+GlobalVariable.friday+GlobalVariable.saturday+GlobalVariable.sunday;
         GlobalVariable.dailyavesales = GlobalVariable.weeklysales/7;
+
+//        int application_id = db.getLastApplication();
+//
+//
+//        MyBusiness business = new MyBusiness(application_id,GlobalVariable.monday,GlobalVariable.tuesday,GlobalVariable.wednesday,GlobalVariable.thursday,
+//                GlobalVariable.friday,GlobalVariable.saturday,GlobalVariable.sunday,GlobalVariable.weeklysales,GlobalVariable.dailyavesales);
 
 
         startActivity(intent);

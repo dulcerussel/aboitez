@@ -17,14 +17,14 @@ import java.util.ArrayList;
 
 public class OperatingDialog extends AppCompatDialogFragment {
     private EditText item, costs, sales, wp;
-    ArrayList<MyOperatingCost> list = new ArrayList<>();
-    private ExampleDialogListener listener;
 
     @Override
     public Dialog onCreateDialog( Bundle savedInstanceState) {
         AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
         LayoutInflater inflater =getActivity().getLayoutInflater();
         View view = inflater.inflate(R.layout.operatinglayout, null);
+
+
         builder.setView(view)
                 .setTitle("Operating Costs")
                 .setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
@@ -42,8 +42,15 @@ public class OperatingDialog extends AppCompatDialogFragment {
                         float txtwp = Float.parseFloat(wp.getText().toString());
                         int txtmarkup = (int) ((txtsales-txtcosts) / txtcosts);
 
-                        MyOperatingCost cost = new MyOperatingCost(txtitem,txtcosts,txtsales,txtmarkup,txtwp);
-                        list.add(cost);
+                        GlobalVariable.item = txtitem;
+                        GlobalVariable.cost = txtcosts;
+                        GlobalVariable.sales = txtsales;
+                        GlobalVariable.weeklypurchase = txtwp;
+                        GlobalVariable.markup = txtmarkup;
+
+
+//                        MyOperatingCost cost = new MyOperatingCost(txtitem,txtcosts,txtsales,txtmarkup,txtwp);
+
 
                     }
                 });
@@ -53,19 +60,5 @@ public class OperatingDialog extends AppCompatDialogFragment {
         wp = view.findViewById(R.id.edit_wp);
 
         return builder.create();
-    }
-
-    public void onAttach(@NonNull Context context) {
-        super.onAttach(context);
-        try {
-            listener = (ExampleDialogListener) context;
-        } catch (ClassCastException e) {
-            throw new ClassCastException(context.toString() +
-                    "must implement ExampleDialogListener");
-        }
-    }
-
-    public interface ExampleDialogListener{
-        void applyTexts(String MonSales, String TueSales, String WedSales, String ThuSales, String FriSales, String SatSales, String SunSales);
     }
 }

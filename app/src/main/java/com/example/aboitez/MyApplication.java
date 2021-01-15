@@ -38,6 +38,11 @@ public class MyApplication extends Application {
         this.maxloanamount = maxloanamount;
     }
 
+    public MyApplication(int id, int applicant_id) {
+        this.id = id;
+        this.applicant_id = applicant_id;
+    }
+
     public MyApplication() {
     }
 

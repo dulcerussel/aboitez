@@ -21,11 +21,17 @@ public class AddApplicant extends AppCompatActivity {
     private EditText businessname1;
     private EditText businesstype1;
 
+
+    DBHelper db;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_applicant);
         button = (Button) findViewById(R.id.BtnAddAppli);
+
+
+        db = new DBHelper(this);
+
         this.clientname1 = (EditText) findViewById(R.id.nameofclient);
         this.groupname1 = (EditText) findViewById(R.id.groupname);
         this.branch1 = (EditText) findViewById(R.id.branch);
@@ -46,7 +52,7 @@ public class AddApplicant extends AppCompatActivity {
 
     private void openActivity() {
         Intent intent = new Intent(this, GrossDailySales.class);
-//      MyApplicant applicant = new MyApplicant();
+
 
         GlobalVariable.clientname = clientname1.getText().toString();
         GlobalVariable.groupname = groupname1.getText().toString();
@@ -57,16 +63,10 @@ public class AddApplicant extends AppCompatActivity {
         GlobalVariable.businessname = businessname1.getText().toString();
         GlobalVariable.businesstype = businesstype1.getText().toString();
 
-
-//        applicant.setClientname(clientname1.getText().toString());
-//        applicant.setGroupname(groupname1.getText().toString());
-//        applicant.setBranchname(branch1.getText().toString());
-//        applicant.setArea(area1.getText().toString());
-//        applicant.setDateconducted(date1.getText().toString());
-//        applicant.setLoanapplied(loanapplied1.getText().toString());
-//        applicant.setBusinessname(businessname1.getText().toString());
-//        applicant.setBusinesstype(businesstype1.getText().toString());
-
+//        MyApplicant applicant = new MyApplicant(GlobalVariable.clientname, GlobalVariable.groupname, GlobalVariable.branchname,
+//                GlobalVariable.area,GlobalVariable.dateconducted,GlobalVariable.loanapplied, GlobalVariable.businessname,GlobalVariable.businesstype);
+//
+//        db.insertApplicant(applicant);
 
         startActivity(intent);
     }

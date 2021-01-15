@@ -59,6 +59,19 @@ public class MyBusiness extends Application {
         this.netcost = netcost;
     }
 
+    public MyBusiness(int application_id, float monday, float tuesday, float wednesday, float thursday, float friday, float saturday, float sunday, float weeklysales, float dailyavesales) {
+        this.application_id = application_id;
+        this.monday = monday;
+        this.tuesday = tuesday;
+        this.wednesday = wednesday;
+        this.thursday = thursday;
+        this.friday = friday;
+        this.saturday = saturday;
+        this.sunday = sunday;
+        this.weeklysales = weeklysales;
+        this.dailyavesales = dailyavesales;
+    }
+
     public MyBusiness() {
     }
 

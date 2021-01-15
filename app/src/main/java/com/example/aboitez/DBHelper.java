@@ -33,13 +33,13 @@ public class DBHelper extends SQLiteOpenHelper {
     @Override
     public void onCreate(SQLiteDatabase db) {
         String table1 = "CREATE TABLE "+TBL_APPLICANT+" (id INTEGER PRIMARY KEY autoincrement,clientname TEXT,groupname TEXT,branchname TEXT,area TEXT,dateconducted TEXT,loanapplied TEXT,businessname TEXT,businesstype TEXT)";
-        String table2 = "CREATE TABLE "+TBL_APPLICATION+" (id INTEGER PRIMARY KEY autoincrement,applicant_id INTEGER,business_total REAL,household_total REAL,totalnetcombineincome REAL,adc REAL,loanterm TEXT,adcxterms REAL,maxloanamount REAL,FOREIGN KEY (application_id) REFERENCES applicant(id)) ";
-        String table3 = "CREATE TABLE "+TBL_HOUSEHOLD+" (id INTEGER PRIMARY KEY autoincrement,application_id INTEGER,grosshouseincome REAL,grosshouseexpense REAL,nethouseincome REAL,grosspersonalincome REAL,familylocsize REAL,expectedhouseexpense REAL,FOREIGN KEY (application_id) REFERENCES applicant(id))";
-        String table4 = "CREATE TABLE "+TBL_HOUSEHOLDINCOME+"(id INTEGER PRIMARY KEY autoincrement,household_id INTEGER,sourceincome TEXT,details TEXT,type TEXT,freq TEXT,amount REAL,FOREIGN KEY (household_id) REFERENCES household(id))";
-        String table5 = "CREATE TABLE "+TBL_HOUSEHOLDEXPENSE+" (id INTEGER PRIMARY KEY autoincrement,household_id INTEGER,houseutilies TEXT,houserent TEXT,housefood TEXT,housemedicine TEXT,houseeduc TEXT,otherexpense TEXT,FOREIGN KEY (household_id) REFERENCES household(id))";
-        String table6 = "CREATE TABLE "+TBL_BUSINESS+" (id INTEGER PRIMARY KEY autoincrement,application_id INTEGER,monday REAL,tuesday REAL,wednesday REAL,thursday REAL,friday REAL,saturday REAL,sunday REAL,weeklysales REAL,dailyavesales REAL,dailystandavesales REAL,actualmarkup REAL,FOREIGN KEY (application_id) REFERENCES applicant(id))";
-        String table7 = "CREATE TABLE "+TBL_OPERATINGCOST+" (id INTEGER PRIMARY KEY autoincrement,business_id INTEGER,item TEXT,cost REAL,sales REAL,markup REAL,weeklypurchase REAL,FOREIGN KEY (business_id) REFERENCES business(id))";
-        String table8 = "CREATE TABLE "+TBL_OTHERCOST+" (id INTEGER PRIMARY KEY autoincrement,business_id INTEGER,loss REAL,transpo REAL,salaries REAL,others REAL,FOREIGN KEY (business_id) REFERENCES business(id))";
+        String table2 = "CREATE TABLE "+TBL_APPLICATION+" (id INTEGER PRIMARY KEY autoincrement,applicant_id INTEGER,business_total REAL,household_total REAL,totalnetcombineincome REAL,adc REAL,loanterm TEXT,adcxterms REAL,maxloanamount REAL)";
+        String table3 = "CREATE TABLE "+TBL_HOUSEHOLD+" (id INTEGER PRIMARY KEY autoincrement,application_id INTEGER,grosshouseincome REAL,grosshouseexpense REAL,nethouseincome REAL,grosspersonalincome REAL,familylocsize REAL,expectedhouseexpense REAL)";
+        String table4 = "CREATE TABLE "+TBL_HOUSEHOLDINCOME+"(id INTEGER PRIMARY KEY autoincrement,household_id INTEGER,sourceincome TEXT,details TEXT,type TEXT,freq TEXT,amount REAL)";
+        String table5 = "CREATE TABLE "+TBL_HOUSEHOLDEXPENSE+" (id INTEGER PRIMARY KEY autoincrement,household_id INTEGER,houseutilies TEXT,houserent TEXT,housefood TEXT,housemedicine TEXT,houseeduc TEXT,otherexpense TEXT)";
+        String table6 = "CREATE TABLE "+TBL_BUSINESS+" (id INTEGER PRIMARY KEY autoincrement,application_id INTEGER,monday REAL,tuesday REAL,wednesday REAL,thursday REAL,friday REAL,saturday REAL,sunday REAL,weeklysales REAL,dailyavesales REAL,dailystandavesales REAL,actualmarkup REAL)";
+        String table7 = "CREATE TABLE "+TBL_OPERATINGCOST+" (id INTEGER PRIMARY KEY autoincrement,business_id INTEGER,item TEXT,cost REAL,sales REAL,markup REAL,weeklypurchase REAL)";
+        String table8 = "CREATE TABLE "+TBL_OTHERCOST+" (id INTEGER PRIMARY KEY autoincrement,business_id INTEGER,loss REAL,transpo REAL,salaries REAL,others REAL)";
 
         db.execSQL(table1);
         db.execSQL(table2);
@@ -222,7 +222,7 @@ public class DBHelper extends SQLiteOpenHelper {
     public ArrayList<MyOperatingCost> getAllOperatingCost(){
         SQLiteDatabase db=this.getReadableDatabase();
         ArrayList<MyOperatingCost> list=new ArrayList<MyOperatingCost>();
-        Cursor c=db.query(TBL_OPERATINGCOST,null,null,null,null,null,"name");
+        Cursor c=db.query(TBL_OPERATINGCOST,null,null,null,null,null,"id");
         //set the record pointer to the first record
         c.moveToFirst();
         while(!c.isAfterLast()){
@@ -243,6 +243,108 @@ public class DBHelper extends SQLiteOpenHelper {
         return list;
     }
 
+    public int getLastApplicant(){
+        SQLiteDatabase db=this.getReadableDatabase();
+        int id = 0;
+        Cursor c=db.query(TBL_APPLICANT,null,null,null,null,null,"id");
+        //set the record pointer to the first record
+        c.moveToLast();
+        while(!c.isAfterLast()){
+             id=c.getInt(c.getColumnIndex("id"));
+        }
+        db.close();
+        return id;
+    }
+
+    public int getLastHouseholdexpense(){
+        SQLiteDatabase db=this.getReadableDatabase();
+        int id = 0;
+        Cursor c=db.query(TBL_HOUSEHOLDEXPENSE,null,null,null,null,null,"id");
+        //set the record pointer to the first record
+        c.moveToLast();
+        while(!c.isAfterLast()){
+            id=c.getInt(c.getColumnIndex("id"));
+        }
+        db.close();
+        return id;
+    }
+
+    public int getLastHouseholdincome(){
+        SQLiteDatabase db=this.getReadableDatabase();
+        int id = 0;
+        Cursor c=db.query(TBL_HOUSEHOLDINCOME,null,null,null,null,null,"id");
+        //set the record pointer to the first record
+        c.moveToLast();
+        while(!c.isAfterLast()){
+            id=c.getInt(c.getColumnIndex("id"));
+        }
+        db.close();
+        return id;
+    }
+    public int getLastOperatingCost(){
+        SQLiteDatabase db=this.getReadableDatabase();
+        int id = 0;
+        Cursor c=db.query(TBL_OPERATINGCOST,null,null,null,null,null,"id");
+        //set the record pointer to the first record
+        c.moveToLast();
+        while(!c.isAfterLast()){
+            id=c.getInt(c.getColumnIndex("id"));
+        }
+        db.close();
+        return id;
+    }
+
+    public int getLastOthercost(){
+        SQLiteDatabase db=this.getReadableDatabase();
+        int id = 0;
+        Cursor c=db.query(TBL_OTHERCOST,null,null,null,null,null,"id");
+        //set the record pointer to the first record
+        c.moveToLast();
+        while(!c.isAfterLast()){
+            id=c.getInt(c.getColumnIndex("id"));
+        }
+        db.close();
+        return id;
+    }
+
+    public int getLastApplication(){
+        SQLiteDatabase db=this.getReadableDatabase();
+        int id = 0;
+        Cursor c=db.query(TBL_APPLICATION,null,null,null,null,null,"id");
+        //set the record pointer to the first record
+        c.moveToLast();
+        while(!c.isAfterLast()){
+            id=c.getInt(c.getColumnIndex("id"));
+        }
+        db.close();
+        return id;
+    }
+
+    public int getLastBusiness(){
+        SQLiteDatabase db=this.getReadableDatabase();
+        int id = 0;
+        Cursor c=db.query(TBL_BUSINESS,null,null,null,null,null,"id");
+        //set the record pointer to the first record
+        c.moveToLast();
+        while(!c.isAfterLast()){
+            id=c.getInt(c.getColumnIndex("id"));
+        }
+        db.close();
+        return id;
+    }
+
+    public int getLastHousehold(){
+        SQLiteDatabase db=this.getReadableDatabase();
+        int id = 0;
+        Cursor c=db.query(TBL_HOUSEHOLD,null,null,null,null,null,"id");
+        //set the record pointer to the first record
+        c.moveToLast();
+        while(!c.isAfterLast()){
+            id=c.getInt(c.getColumnIndex("id"));
+        }
+        db.close();
+        return id;
+    }
 
     public int deleteApplicant(int id){
         SQLiteDatabase db=this.getWritableDatabase();

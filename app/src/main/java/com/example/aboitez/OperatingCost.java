@@ -10,6 +10,7 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -64,7 +65,15 @@ public class OperatingCost extends AppCompatActivity {
     }
 
   private void openDialog() {
+        long result = 0;
+      String message=null;
       OperatingDialog operatingDialog = new OperatingDialog();
        operatingDialog.show(getSupportFragmentManager(),"example dialog");
+       MyOperatingCost operatingCost = new MyOperatingCost(GlobalVariable.item, GlobalVariable.cost, GlobalVariable.sales, GlobalVariable.markup,GlobalVariable.weeklypurchase);
+      result=db.insertMyOperatingCost(operatingCost);
+      message=(result>0)?"Operating Added":"";
+      Toast.makeText(this,message,Toast.LENGTH_SHORT).show();
+      list.add(operatingCost);
+        adapter.notifyDataSetChanged();
    }
 }

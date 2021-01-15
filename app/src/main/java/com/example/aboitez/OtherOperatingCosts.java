@@ -54,16 +54,16 @@ public class OtherOperatingCosts extends AppCompatActivity {
 //        otherOperatingCost.setOthers(Float.parseFloat(this.others1.getText().toString()));
 
 
-        GlobalVariable.loss = Float.parseFloat(this.loses.getText().toString());
-        GlobalVariable.transpo = Float.parseFloat(this.fuel.getText().toString());
-        GlobalVariable.salaries = Float.parseFloat(this.salaries.getText().toString());
-        GlobalVariable.others = Float.parseFloat(this.others1.getText().toString());
-
-        GlobalVariable.netcost = GlobalVariable.weeklypurchase +GlobalVariable.loss + GlobalVariable.transpo + GlobalVariable.salaries + GlobalVariable.others;
-
-        GlobalVariable.netprofit = (float) (GlobalVariable.netcost * 0.25);
-        GlobalVariable.weeklystandsales = (float) (GlobalVariable.netcost * 1.25);
-        GlobalVariable.dailystandavesales= GlobalVariable.weeklystandsales/7;
+//        GlobalVariable.loss = Float.parseFloat(this.loses.getText().toString());
+//        GlobalVariable.transpo = Float.parseFloat(this.fuel.getText().toString());
+//        GlobalVariable.salaries = Float.parseFloat(this.salaries.getText().toString());
+//        GlobalVariable.others = Float.parseFloat(this.others1.getText().toString());
+//
+//        GlobalVariable.netcost = GlobalVariable.weeklypurchase +GlobalVariable.loss + GlobalVariable.transpo + GlobalVariable.salaries + GlobalVariable.others;
+//
+//        GlobalVariable.netprofit = (float) (GlobalVariable.netcost * 0.25);
+//        GlobalVariable.weeklystandsales = (float) (GlobalVariable.netcost * 1.25);
+//        GlobalVariable.dailystandavesales= GlobalVariable.weeklystandsales/7;
 
         Intent intent = new Intent(this, Result1.class);
         startActivity(intent);

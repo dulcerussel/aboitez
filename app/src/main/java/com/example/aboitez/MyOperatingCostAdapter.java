@@ -42,7 +42,8 @@ public class MyOperatingCostAdapter extends BaseAdapter {
     public View getView(int i, View view, ViewGroup viewGroup) {
         ItemHandler handler=null;
         if(view==null){
-            view=inflater.inflate(R.layout.operatingcost, null);
+            view=inflater.inflate(R.layout.operatingcost, viewGroup);
+
             handler = new ItemHandler();
             handler.item=view.findViewById(R.id.textView49);
             handler.cost=view.findViewById(R.id.textView52);
